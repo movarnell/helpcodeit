@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../../style.css" rel="stylesheet">
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body text-white " data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../../images/HELP Dark.png" class="navIcon border border-1 border-danger" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+          <li class="nav-item navText">
+            <a class="nav-link text-white navText" aria-current="page" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item navText">
+            <a class="nav-link navText" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown navText">
+            <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Languages & Concepts
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item navText" href="#">HTML & CSS</a></li>
+              <li><a class="dropdown-item navText" href="#">JavaScript</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item navText" href="#">React</a></li>
+              <li><a class="dropdown-item navText" href="#">Bootstrap</a></li>
+              <li><a class="dropdown-item active navText" href="#">Array Methods</a></li>
+              <li><hr class="dropdown-divider"></li>
+
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- !SECTION end Nav -->
+
+<!-- SECTION Main Content -->
+
+<!-- SECTION Array Methods Table-->
+<div class="container pt-4">
+  <h1 class="text-center">Array Methods</h1>
+<table class="table table-dark table-striped table-bordered tableStyleCustomizations">
+  <thead>
+    <tr>
+      <th>Method Name</th>
+      <th>Return Value</th>
+      <th>Explanation</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <td>push()</td>
+      <td>The modified array</td>
+      <td>Appends one or more elements to the end of the array.</td>
+      <td>arr.push("hello", "world");</td>
+    </tr>
+    <tr>
+      <td>pop()</td>
+      <td>The removed element</td>
+      <td>Removes the last element from the array and returns it.</td>
+      <td>const lastElement = arr.pop();</td>
+    </tr>
+    <tr>
+      <td>shift()</td>
+      <td>The removed element</td>
+      <td>Removes the first element from the array and returns it.</td>
+      <td>const firstElement = arr.shift();</td>
+    </tr>
+    <tr>
+      <td>unshift()</td>
+      <td>The modified array</td>
+      <td>Prepends one or more elements to the beginning of the array.</td>
+      <td>arr.unshift("hello", "world");</td>
+    </tr>
+    <tr>
+      <td>splice()</td>
+      <td>A new array with the removed elements</td>
+      <td>Removes elements from the array and optionally inserts new elements at the specified indexes.</td>
+      <td>const newArr = arr.splice(1, 2, "hello", "world");</td>
+    </tr>
+    <tr>
+      <td>slice()</td>
+      <td>A new array with the specified elements</td>
+      <td>Copies a section of the array and returns it.</td>
+      <td>const newArr = arr.slice(1, 3);</td>
+    </tr>
+    <tr>
+      <td>concat()</td>
+      <td>A new array with the concatenated arrays</td>
+      <td>Concatenates two or more arrays and returns a new array.</td>
+      <td>const newArr = arr.concat(["hello", "world"]);</td>
+    </tr>
+    <tr>
+      <td>join()</td>
+      <td>A string with the elements of the array</td>
+      <td>Joins the elements of the array into a string.</td>
+      <td>const string = arr.join(", ");</td>
+    </tr>
+    <tr>
+      <td>map()</td>
+      <td>A new array with the results of the function</td>
+      <td>Applies a function to each element of the array and returns a new array with the results.</td>
+      <td>const newArr = arr.map(element => element * 2);</td>
+    </tr>
+    <tr>
+      <td>filter()</td>
+      <td>A new array with the elements that pass the test</td>
+      <td>Creates a new array with the elements of the original array that pass a test.</td>
+      <td>const newArr = arr.filter(element => element % 2 === 0);</td>
+    </tr>
+    <tr>
+      <td>reduce()</td>
+      <td>The accumulated value</td>
+      <td>Reduces the array to a single value by applying a function to each element and accumulating the results.</td>
+      <td>const sum = arr.reduce((accumulator, element) => accumulator + element, 0);</td>
+    </tr>
+    <tr>
+      <td>reduceRight()</td>
+      <td>The accumulated value</td>
+      <td>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</td>
+      <td>const sum = arr.reduceRight((accumulator, element) => accumulator + element, 0);</td>
+    </tr>
+    <tr>
+      <td>every()</td>
+      <td>True or false</td>
+      <td>Tests whether all elements in the array pass the test implemented by the provided function.</td>
+      <td>const allEven = arr.every(element => element % 2 === 0);</td>
+    </tr>
+    <tr>
+      <td>some()</td>
+      <td>True or false</td>
+      <td>Tests whether some element in the array passes the test implemented by the provided function.</td>
+      <td>const someEven = arr.some(element => element % 2 === 0);</td>
+    </tr>
+    <tr>
+      <td>includes()</td>
+      <td>True or false</td>
+      <td>Tests whether the array contains the specified element.</td>
+      <td>const hasElement = arr.includes(2);</td>
+    </tr>
+    <tr>
+      <td>indexOf()</td>
+      <td>The index of the element</td>
+      <td>Returns the first index of the specified element in the array.</td>
+      <td>const index = arr.indexOf(2);</td>
+    </tr>
+    <tr>
+      <td>lastIndexOf()</td>
+      <td>The index of the element</td>
+      <td>Returns the last index of the specified element in the array.</td>
+      <td>const index = arr.lastIndexOf(2);</td>
+    </tr>
+    <tr>
+      <td>find()</td>
+      <td>The value of the element</td>
+      <td>Returns the value of the first element in the array that satisfies the provided testing function.</td>
+      <td>const element = arr.find(element => element % 2 === 0);</td>
+    </tr>
+    <tr>
+      <td>findIndex()</td>
+      <td>The index of the element</td>
+      <td>Returns the index of the first element in the array that satisfies the provided testing function.</td>
+      <td>const index = arr.findIndex(element => element % 2 === 0);</td>
+    </tr>
+    <tr>
+      <td>sort()</td>
+      <td>The modified array</td>
+      <td>Sorts the elements of the array in place.</td>
+      <td>arr.sort();</td>
+    </tr>
+    <tr>
+      <td>reverse()</td>
+      <td>The modified array</td>
+      <td>Reverses the order of the elements of the array in place.</td>
+      <td>arr.reverse();</td>
+    </tr>
+    <tr>
+      <td>fill()</td>
+      <td>The modified array</td>
+      <td>Fills all the elements of the array from a start index to an end index with a static value.</td>
+      <td>arr.fill(0, 1, 3);</td>
+    </tr>
+    <tr>
+      <td>copyWithin()</td>
+      <td>The modified array</td>
+      <td>Copies a sequence of array elements within the array.</td>
+      <td>arr.copyWithin(0, 1, 3);</td>
+    </tr>
+    <tr>
+      <td>flat()</td>
+      <td>A new array with the sub-array elements concatenated</td>
+      <td>Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</td>
+      <td>const newArr = arr.flat();</td>
+    </tr>
+    <tr>
+      <td>flatMap()</td>
+      <td>A new array with the sub-array elements concatenated</td>
+      <td>Maps each element using a mapping function, then flattens the result into a new array.</td>
+      <td>const newArr = arr.flatMap(element => [element * 2]);</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<!-- !SECTION end Array Methods -->
+ 
+
+
+
+
+<!-- !SECTION end Main Content -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>

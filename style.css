@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
 .navIcon {
     width: 100px;
@@ -41,3 +42,13 @@
     font-family: 'Mukta', sans-serif;
     font-size: 2rem;
 }
+
+.cardImageFormat {
+    max-width: 100%;
+}
+
+.tableStyleCustomizations {
+    border: 2px solid gray;
+    font-family: 'Roboto Slab', serif;
+}
+
