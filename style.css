@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
 
+td {
+    vertical-align: middle;
+}
+
 .navIcon {
     width: 100px;
     height: 100px;
@@ -54,3 +58,4 @@
 .pressStartFont {
     font-family: 'Press Start 2P', cursive;
 }
+
