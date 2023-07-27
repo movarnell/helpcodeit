@@ -1,11 +1,43 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 .navIcon {
     width: 100px;
-    height: 100px;  
+    height: 100px;
+    background-color: black;
+    padding:.5rem  
 }
 
 .navText {
     font-size: x-large;
+}
+
+.jumboBackground {
+    background-image: url("images/pexels-lukas-574069.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 500px;
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.logoBackground {
+    background-color: black;
+    width: 200px;
+}
+
+.heroLogo {
+    background-color: black;
+    border: 2px solid red;
+    max-width: 300px;
+}
+
+.heroText {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Mukta', sans-serif;
+    font-size: 2rem;
 }
