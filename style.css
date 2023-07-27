@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
 
 .navIcon {
     width: 100px;
@@ -52,3 +51,6 @@
     font-family: 'Roboto Slab', serif;
 }
 
+.pressStartFont {
+    font-family: 'Press Start 2P', cursive;
+}

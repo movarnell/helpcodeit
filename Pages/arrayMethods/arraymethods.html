@@ -54,7 +54,7 @@
 
 <!-- SECTION Array Methods Table-->
 <div class="container pt-4">
-  <h1 class="text-center">Array Methods</h1>
+  <h1 class="text-center pressStartFont">Array Methods</h1>
 <table class="table table-dark table-striped table-bordered tableStyleCustomizations">
   <thead>
     <tr>
@@ -69,151 +69,205 @@
       <td>push()</td>
       <td>The modified array</td>
       <td>Appends one or more elements to the end of the array.</td>
-      <td>arr.push("hello", "world");</td>
+      <td>let array = [];<br/>
+         array.push("hello", "world");<br/>
+         <span style="color: yellowgreen">["hello", "world"]</span> </td>
     </tr>
     <tr>
       <td>pop()</td>
       <td>The removed element</td>
       <td>Removes the last element from the array and returns it.</td>
-      <td>const lastElement = arr.pop();</td>
+      <td>let array = [ 1, 2, 3]<br/>
+        const lastElement = arr.pop();<br/>
+        <span style="color: yellowgreen">[3]</span></td>
     </tr>
     <tr>
       <td>shift()</td>
       <td>The removed element</td>
       <td>Removes the first element from the array and returns it.</td>
-      <td>const firstElement = arr.shift();</td>
+      <td>let array = [1,2,3];<br/>
+        const firstElement = array.shift();<br/>
+        <span style="color: yellowgreen">[1]</span></td>
     </tr>
     <tr>
       <td>unshift()</td>
       <td>The modified array</td>
       <td>Prepends one or more elements to the beginning of the array.</td>
-      <td>arr.unshift("hello", "world");</td>
+      <td>let array =[1,2,3];<br/>
+        array.unshift("hello", "world");<br/>
+        <span style="color: yellowgreen">["hello", "world", 1, 2, 3]</td>
     </tr>
     <tr>
       <td>splice()</td>
       <td>A new array with the removed elements</td>
       <td>Removes elements from the array and optionally inserts new elements at the specified indexes.</td>
-      <td>const newArr = arr.splice(1, 2, "hello", "world");</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.splice(1, 2, "hello", "world");<br/>
+        <span style="color: yellowgreen">["world", "welcome"]</span></td>
     </tr>
     <tr>
       <td>slice()</td>
       <td>A new array with the specified elements</td>
       <td>Copies a section of the array and returns it.</td>
-      <td>const newArr = arr.slice(1, 3);</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.slice(1, 3);<br/>
+        <span style="color: yellowgreen">["world", "welcome"]</span></td>
     </tr>
     <tr>
       <td>concat()</td>
       <td>A new array with the concatenated arrays</td>
       <td>Concatenates two or more arrays and returns a new array.</td>
-      <td>const newArr = arr.concat(["hello", "world"]);</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.concat(["hello", "world"]);<br/>
+        <span style="color: yellowgreen">["hello", "world", "welcome", "home", "hello", "world"]</span></td>
     </tr>
     <tr>
       <td>join()</td>
       <td>A string with the elements of the array</td>
       <td>Joins the elements of the array into a string.</td>
-      <td>const string = arr.join(", ");</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newString = array.join(" ");<br/>
+        <span style="color: yellowgreen">"hello world welcome home"</span></td>
     </tr>
     <tr>
       <td>map()</td>
       <td>A new array with the results of the function</td>
       <td>Applies a function to each element of the array and returns a new array with the results.</td>
-      <td>const newArr = arr.map(element => element * 2);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const newArray = array.map(element => element * 2);<br/>
+        <span style="color: yellowgreen">[2, 4, 6, 8, 10]</span></td>  
+      </td>
     </tr>
     <tr>
       <td>filter()</td>
       <td>A new array with the elements that pass the test</td>
       <td>Creates a new array with the elements of the original array that pass a test.</td>
-      <td>const newArr = arr.filter(element => element % 2 === 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const newArray = array.filter(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">[2, 4]</span></td>
     </tr>
     <tr>
       <td>reduce()</td>
       <td>The accumulated value</td>
       <td>Reduces the array to a single value by applying a function to each element and accumulating the results.</td>
-      <td>const sum = arr.reduce((accumulator, element) => accumulator + element, 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const sum = array.reduce((accumulator, element) => accumulator + element, 0);<br/>
+        <span style="color: yellowgreen">15</span></td>
     </tr>
     <tr>
       <td>reduceRight()</td>
       <td>The accumulated value</td>
       <td>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</td>
-      <td>const sum = arr.reduceRight((accumulator, element) => accumulator + element, 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const sum = array.reduceRight((accumulator, element) => accumulator + element, 0);<br/>
+        <span style="color: yellowgreen">15</span></td>
     </tr>
     <tr>
       <td>every()</td>
       <td>True or false</td>
       <td>Tests whether all elements in the array pass the test implemented by the provided function.</td>
-      <td>const allEven = arr.every(element => element % 2 === 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const allEven = array.every(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">false</span></td>
+
+      </td>
     </tr>
     <tr>
       <td>some()</td>
       <td>True or false</td>
       <td>Tests whether some element in the array passes the test implemented by the provided function.</td>
-      <td>const someEven = arr.some(element => element % 2 === 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const someEven = array.some(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">true</span></td>
     </tr>
     <tr>
       <td>includes()</td>
       <td>True or false</td>
       <td>Tests whether the array contains the specified element.</td>
-      <td>const hasElement = arr.includes(2);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const hasTwo = array.includes(2);<br/>
+        <span style="color: yellowgreen">true</span></td>
     </tr>
     <tr>
       <td>indexOf()</td>
       <td>The index of the element</td>
       <td>Returns the first index of the specified element in the array.</td>
-      <td>const index = arr.indexOf(2);</td>
+      <td>let array = [1, 2, 3, 4, 5]<br/>
+        const index = array.indexOf(2);<br/>
+        <span style="color: yellowgreen">1</span>
+      </td>
     </tr>
     <tr>
       <td>lastIndexOf()</td>
       <td>The index of the element</td>
       <td>Returns the last index of the specified element in the array.</td>
-      <td>const index = arr.lastIndexOf(2);</td>
+      <td>let array = [1, 2, 3, 4, 5]<br/>
+        const index = array.lastIndexOf(2);<br/>
+        <span style="color: yellowgreen">1</span>
     </tr>
     <tr>
       <td>find()</td>
       <td>The value of the element</td>
       <td>Returns the value of the first element in the array that satisfies the provided testing function.</td>
-      <td>const element = arr.find(element => element % 2 === 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const element = array.find(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">2</span></td>
     </tr>
     <tr>
       <td>findIndex()</td>
       <td>The index of the element</td>
       <td>Returns the index of the first element in the array that satisfies the provided testing function.</td>
-      <td>const index = arr.findIndex(element => element % 2 === 0);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const index = array.findIndex(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">1</span></td>
     </tr>
     <tr>
       <td>sort()</td>
       <td>The modified array</td>
       <td>Sorts the elements of the array in place.</td>
-      <td>arr.sort();</td>
+      <td>let array = ["e", "r" , "d", "v", "a"];<br/>
+        array.sort();<br/>
+        <span style="color: yellowgreen">["a", "d", "e", "r", "v"]</span></td>
     </tr>
     <tr>
       <td>reverse()</td>
       <td>The modified array</td>
       <td>Reverses the order of the elements of the array in place.</td>
-      <td>arr.reverse();</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.reverse();<br/>
+        <span style="color: yellowgreen">[5, 4, 3, 2, 1]</span></td>
     </tr>
     <tr>
       <td>fill()</td>
       <td>The modified array</td>
       <td>Fills all the elements of the array from a start index to an end index with a static value.</td>
-      <td>arr.fill(0, 1, 3);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.fill(0, 1, 3);<br/>
+        <span style="color: yellowgreen">[1, 0, 0, 4, 5]</span></td>
     </tr>
     <tr>
       <td>copyWithin()</td>
       <td>The modified array</td>
       <td>Copies a sequence of array elements within the array.</td>
-      <td>arr.copyWithin(0, 1, 3);</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.copyWithin(0, 3);<br/>
+        <span style="color: yellowgreen">[4, 5, 3, 4, 5]</span></td>
     </tr>
     <tr>
       <td>flat()</td>
       <td>A new array with the sub-array elements concatenated</td>
       <td>Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</td>
-      <td>const newArr = arr.flat();</td>
+      <td>const arr = [1, 2, [3, 4]];<br/>
+        arr.flat();<br/>
+        <span style="color: yellowgreen">[1, 2, 3, 4]</span></td>
     </tr>
     <tr>
       <td>flatMap()</td>
       <td>A new array with the sub-array elements concatenated</td>
       <td>Maps each element using a mapping function, then flattens the result into a new array.</td>
-      <td>const newArr = arr.flatMap(element => [element * 2]);</td>
+      <td>const arr = [1, 2, 3, 4];<br/>
+        arr.flatMap(x => [x * 2]);<br/>
+        <span style="color: yellowgreen">[2, 4, 6, 8]</span></td>
     </tr>
   </tbody>
 </table>
