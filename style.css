@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
 
 td {
     vertical-align: middle;
@@ -47,8 +48,9 @@ td {
 }
 
 .cardImageFormat {
-    max-height: 25%;
+    max-height: 200px;
 }
+
 
 
 
@@ -67,7 +69,58 @@ td {
 }
 
 .fullyCentered {
-    justify-content: center;
-    align-content: center;
+    
+    align-items: center;
     text-align: center;
+}
+
+.setupImageHero{
+    max-height: 300px;
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    padding-top: 30px;
+}
+
+.removeLinkDecor{
+    text-decoration: none;
+    color: black;
+}
+
+.vsLogo{
+    max-width: 250px;
+    max-height: 250px;
+
+}
+
+.whereToStartContainer{
+    margin: auto;
+    max-width: 1000px;
+}
+
+.macSetupAppleLogo{
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.robotoFont{
+    font-family: 'Roboto', sans-serif;
+}
+
+.homebrewLogo{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.macSetupHeader{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.instructionsFont {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
 }

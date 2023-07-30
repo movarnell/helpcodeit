@@ -7,6 +7,7 @@
     <title>Help Code It</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="./style.css" rel="stylesheet">
+    <link href="./prism.css" rel="stylesheet" />
 </head>
 <body>
 <!-- SECTION Navbar     -->
@@ -27,7 +28,7 @@
         <li class="nav-item navText">
           <a class="nav-link navText" href="initialSetup.html">Getting Started</a>
         </li>
-        <!-- <li class="nav-item dropdown navText">
+        <li class="nav-item dropdown navText">
           <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             HTML & CSS
           </a>
@@ -45,7 +46,7 @@
 
             <li><a class="dropdown-item" href="#">Placeholder</a></li>
           </ul>
-        </li> -->
+        </li>
         <li class="nav-item dropdown navText">
           <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             JavaScript
@@ -64,53 +65,53 @@
   </div>
 </nav>
 <!-- !SECTION End Nav -->
-<!-- SECTION Jumbotron -->
-<div class="jumbotron jumbotron-fluid bg-dark text-white jumboBackground">
-    <div class="container pb-5">
-        <div class="row pb-5 mb-3">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center pb-4">
-      <img src="images/HELP Dark.png" alt="Help Code It logo" class="heroLogo p-1 mt-5 ">
-    
-      <p class="heroText">'Resources for beginning developers'</p>
-    </div>
-</div>
-    <div class="col-lg-8 col-md-6 col-sm-12">
-        <!-- NOTE this is a spacer-->
-    </div>
-  </div>
-<!-- !SECTION end Jumbotron -->
+
 <!-- SECTION Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="card">
-        <h5 class="card-header">Getting Started</h5>
-        <div class="card-body">
-          <h5 class="card-title">Initial Setup</h5>
-          <p class="card-text">This page will help you setup your computer to begin programming</p>
-          <a href="initialSetup.html" class="btn btn-primary">Let's Go!</a>
+<div class="container instructionsFont">
+  <div class="row pt-5"><h1 class="text-center macSetupHeader robotoFont">Mac Setup <img src="./images/apple.svg" class="macSetupAppleLogo" alt="Apple Logo"></h1>
+    <div class="container">
+      <h2 class="text-center fw-bolder">This page will walk you through the steps to get your Mac ready for coding.</h2><br/>
+      <h3 class="text-center fw-bolder">The first thing we are going to do is check to see what all is installed on our computer. I will list the commands you will need and show what it looks like.</h3>
+      </div>
+      <div class="row ">
+        <div class="col text-center"><img src="images/homebrew.svg" alt="Homebrew Logo" class="homebrewLogo"></div>
+   
+      <h2 class="text-center">Checking to see if Homebrew is Installed</h2>
+      <h3 class="text-center">Open your terminal and type the following command:</h3>
+      <pre>
+        <code class="language-bash">
+          brew -v
+        </code>
+        </pre> 
+        <div class="col text-center">
+          <br/>
+          <h2 class="fw-bolder">If it is installed then you will see something like this:</h2>
+          <img src="images/Screenshot 2023-07-30 at 4.49.59 PM.png" alt="Homebrew Installed" class="homebrewInstalled img-fluid pt-0">
+        </div> 
+        <p>If homebrew is not installed you will need to install it. The command to use in your terminal to install it will be the first one on the page. But if you want more information on how to do the next steps use the video below.</p>
+        <div class="text-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IWJKRmFLn-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
+        <div class="text-center">
+        <a href="https://brew.sh/" target="_blank" class="btn btn-primary">Go To The Homebrew Installation Page</a>
       </div>
+
+      <div class="row mt-5 pt-3">
+        <h1 class="text-center fw-bolder">Checking to see if NPM is Installed</h1>
+        <pre>
+          <code class="language-bash">
+            npm -v
+          </code>
+          </pre> 
     </div>
-    <div class="col">
-      <div class="card">
-      <h5 class="card-header">Array Methods</h5>
-      <div class="card-body">
-        <h5 class="card-title">Need to see the available options?</h5>
-        <p class="card-text">This page contains a table with all the array methods, with explainations and examples.</p>
-        <a href="#" class="btn btn-primary">See the Table!</a>
-      </div>
-    </div>
-  </div>
+  
   </div>
 </div>
-
-
 
 
 
 <!-- !SECTION end Main Content -->
-
+<script src="prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
