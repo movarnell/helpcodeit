@@ -124,3 +124,18 @@ td {
     font-size: 1.5rem;
     font-weight: 800;
 }
+
+.gitLogo{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.centeredTogether{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.maxWidth600{
+    max-width: 400px;
+}
