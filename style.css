@@ -52,11 +52,18 @@ td {
 }
 
 
-
+.roundTable{
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
 
 .tableStyleCustomizations {
     border: 2px solid gray;
+    
     font-family: 'Roboto Slab', serif;
+    
 }
 
 .pressStartFont {
