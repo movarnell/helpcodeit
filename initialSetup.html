@@ -11,58 +11,59 @@
 <body class="">
 <!-- SECTION Navbar     -->
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body text-white " data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./images/HELP Dark.png" class="navIcon border border-1 border-danger" ></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-          <li class="nav-item navText">
-            <a class="nav-link active text-white navText" aria-current="page" href="/index.html">Home</a>
-          </li>
-          <li class="nav-item navText">
-            <a class="nav-link navText" href="#">About</a>
-          </li>
-          <li class="nav-item navText">
-            <a class="nav-link navText" href="initialSetup.html">Getting Started</a>
-          </li>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="./images/HELP Dark.png" class="navIcon border border-1 border-danger" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+        <li class="nav-item navText">
+          <a class="nav-link active text-white navText" aria-current="page" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item navText">
+          <a class="nav-link navText" href="about.html">About</a>
+        </li>
+        <li class="nav-item navText">
+          <a class="nav-link navText" href="initialSetup.html">Getting Started</a>
+        </li>
+        <!-- 
           <li class="nav-item dropdown navText">
-            <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              HTML & CSS
-            </a>
-            <ul class="dropdown-menu">
-              
+          <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            HTML & CSS
+          </a>
+          <ul class="dropdown-menu">
+            
 
 
-              <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
-              
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
-              <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
+            <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
+            
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
+            <li><a class="dropdown-item navText" href="#">Placeholder</a></li>
 
-              <li><hr class="dropdown-divider"></li>
+            <li><hr class="dropdown-divider"></li>
 
-              <li><a class="dropdown-item" href="#">Placeholder</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown navText">
-            <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              JavaScript
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item navText" href="arraymethods.html">Array Methods</a></li>
+            <li><a class="dropdown-item" href="#">Placeholder</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item dropdown navText">
+          <a class="nav-link dropdown-toggle navText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            JavaScript
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item navText" href="arraymethods.html">Array Methods</a></li>
 
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-secondary" type="submit">Search</button>
-        </form>
-      </div>
+          </ul>
+        </li>
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </form> -->
     </div>
-  </nav>
+  </div>
+</nav>
 <!-- !SECTION End Nav -->
 <!-- SECTION Main Content -->
 
@@ -102,16 +103,19 @@
     <div class="row fullyCentered">
       <hr class="border border-1 border-dark">
       <h1 class="text-center display-3 pt-4">What's Next?</h1>
-      <h2 class="text-center display-6 pt-5">Select your operating system</h2>
-      <div class="row centeredTogether">
-      <div class="col m-2  maxWidth600">
-        <a href="macSetup.html" class="removeLinkDecor" alt="Mac Setup Page"><img src="./images/apple.svg" class="img-fluid" alt="Mac Logo">
-        <h2 class="p-3">Mac Setup Page</h2></a> 
+      
+      <h2 class="text-center display-6 pt-5 pb-5">Select your operating system</h2>
+      <div class="row centeredTogether maxWidthRow">
+        
+      <div class="col-md-2 col-sm-12  ">
+        <a href="macSetup.html" class="removeLinkDecor" alt="Mac Setup Page"><img src="./images/apple.svg" class="img-fluid maxWidth" alt="Mac Logo">
+        <h2 class="p-3">Mac Setup</h2></a> 
       </div>
-      <div class="col pt-5 m-2 maxWidth600">
-        <a href="winSetup.html" class="removeLinkDecor" alt="Windows Setup Page"><img src="./images/microsoft-windows-icon.svg" class="img-fluid" alt="Windows Logo"><h2 class="p-5">Windows Setup Page</h2> </a>
+      <div class="col-md-2 col-sm-12">
+        <a href="winSetup.html" class="removeLinkDecor" alt="Windows Setup Page"><img src="./images/microsoft-windows-icon.svg" class="img-fluid maxWidth" alt="Windows Logo"><h2 class="pt-3">Windows Setup</h2> </a>
       </div>
       </div>
+    </div>
     </div>
 
 </div>
