@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container mukataFont">
+  <div class="row">
+  <h1 class="display-4 text-center">Understanding Variables in JavaScript</h1>
+
+  <section>
+    <h2>What is a Variable?</h2>
+    <p>A variable is like a box where we can keep things. In programming, we use variables to store information like numbers, words, or more complex stuff.</p>
+  </section>
+
+  <section>
+    <h2>Using 'var'</h2>
+    <p>The 'var' way to make a variable is the old way. We don't use it anymore, but you might still see it. Here's an example:</p>
+    <pre><code class="language-javascript">var myName = 'Alice';</code></pre>
+  </section>
+
+  <section>
+    <h2>Using 'let'</h2>
+    <p>'let' is the new way to make a variable that you can change later. Here's an example:</p>
+    <pre><code class="language-javascript">let myAge = 10;
+myAge = 11; // You can change it!</code></pre>
+  </section>
+
+  <section>
+    <h2>Using 'const'</h2>
+    <p>If you want to make a variable that never changes, use 'const'. Here's how:</p>
+    <pre><code class="language-javascript">const mySchool = 'Cool School';</code></pre>
+  </section>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Use 'var' if you see old code, 'let' if you want to change the variable, and 'const' if you never want it to change. Happy coding!</p>
+  </section>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-6"><iframe width="560" height="315" src="https://www.youtube.com/embed/9WIJQDvt4Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <div class="col"></div>
+  
+</div>
+</div>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
