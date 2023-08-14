@@ -7,23 +7,63 @@
 <link rel="stylesheet" src="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 <title>Windows Setup Guide</title>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
-<link href="./style.css" rel="stylesheet"/>
-<link href="./prism.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet"/>
+<link href="../prism.css" rel="stylesheet"/>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</link></head>
-<body>
-<!-- SECTION Navbar     -->
+
+</head>
+<!-- SECTION Navbar -->
 <div id="nav-placeholder">
 </div>
+
 <script>
 $(function(){
   $("#nav-placeholder").load("../nav.html");
 });
 </script>
 <!-- !SECTION End Nav -->
-<!-- SECTION Main Content -->
-<div class="container instructionsFont"><h2>Configuring Command Prompt</h2><h4>Example Response:</h4>Follow the instructions provided with your Windows installation media.<br/><h4></h4>Configure user preferences, language, timezone, etc.<br/><h2></h2><h4></h4>Download and install a web browser such as Google Chrome or Mozilla Firefox.<br/><h4></h4>Install tools like Visual Studio Code, Git, Node.js, etc.<br/><h2></h2><h4></h4>Press Win + R, type 'cmd' and press Enter.<br/><h4></h4>&lt;pre&gt;&lt;code class='language-batch'&gt;C:\&gt;ipconfig&lt;/code&gt;&lt;/pre&gt;<br/><h4></h4>&lt;pre&gt;&lt;code class='language-batch'&gt;Windows IP Configuration
 
-Ethernet adapter Ethernet:
-   IPv4 Address. . . . . . . . . . . : 192.168.1.1&lt;/code&gt;&lt;/pre&gt;<br/></div></body>
+<!-- SECTION Main Content -->
+<div class="container instructionsFont">
+  <div class="row pt-5 fullyCentered">
+    <div class="col">
+      <h1 class="text-center windowsSetupHeader robotoFont">Windows Setup  <img alt="Windows Logo" class="windowsSetupLogo" src="../images/microsoft-windows-icon.svg" width="30px"/></h1>
+      
+    </div>
+  </div>
+  <div class="row pt-4">
+    <div class="col"><h2 class="fw-bolder">1. Install Node.js and npm</h2></div>
+    <div class="col"><img src="../images/nodejs.svg" width="200px" alt="Node JS logo"></div>
+  </div>
+  <div class="row pt-4">
+    
+    <p>
+      Go to the official <a href="https://nodejs.org/" target="_blank">Node.js website</a> and download the installer suitable for your system. By installing Node.js, you'll automatically get npm as well.
+    </p>
+    <pre><code class="language-bash">node -v
+npm -v</code></pre>
+    <p>
+      Run the above commands in your terminal to verify the installation. If installed correctly, you should see the version of Node.js and npm installed on your system.
+    </p>
+  </div>
+  <div class="row pt-4">
+    <div class="col"><h2 class="fw-bolder">1. Install Git</h2></div>
+    <div class="col"><img src="../images/git.svg" width="200px" alt="Git logo"></div>
+  </div>
+  <div class="row pt-4"></div>
+    <p>
+      Download the Git installer for Windows from the official <a href="https://git-scm.com/" target="_blank">Git website</a>. Follow the installation instructions.
+    </p>
+    <pre><code class="language-bash">git --version</code></pre>
+    <p>
+      Use the above command to check if Git was installed successfully. If installed correctly, you should see the version of Git installed on your system.
+    </p>
+  </div>
+</div>
+<!-- !SECTION End Main Content -->
+<script src="../prism.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
