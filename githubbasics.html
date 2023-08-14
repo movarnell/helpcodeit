@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<body>
+  <div class="container mt-5">
+      <h1 class="text-center align-items-center display-3 fw-bolder pb-4">Getting Started with  <img src="./images/github.svg" class="pb-2" width="200px"> <img src="./images/github-icon.svg" class="pb-2" width="50px"></h1>
+      <h2 class="text-center fw-bold">Welcome to our beginner's guide on how to use GitHub! If you're new to coding or version control, you're in the right place. We'll take you through each step, explaining everything in simple terms.</h2>
+
+      <h2 class="mt-4">What is GitHub?</h2>
+      <p>Think of GitHub as a place where you can save your code projects, share them with others, and work on them together. It's like a magical code storage!</p>
+      <p>When using GitHub it is important to understand that you can commit often and keep your information backed up. This is a great way to add security to what you're working on. If something were to happen to your local information you can even pull down what is on GitHub and use it to restore all that you had done all the way to the last time you commited.</p>
+      <>There are three steps involved each time after first setting up your GitHub account but the first time there will be some additional commands that are used to get it all setup for each new repository. More on that later though, let's get started!</p>
+
+      <h2 class="mt-4">Step 1: Setting up a GitHub Account</h2>
+      <p>Before you can use GitHub, you need an account.</p>
+      <ol>
+          <li>Visit <a href="https://github.com/">github.com</a>.</li>
+          <li>Click on 'Sign up' and follow the instructions.</li>
+      </ol>
+
+      <h2 class="mt-4">Step 2: Creating a New Repository</h2>
+      <p>A repository (or "repo") is like a folder for your project. Here's how you make one:</p>
+      <ol>
+          <li>Once logged in, click on the '+' icon on the top right and select 'New repository'.</li>
+          <li>Name your repository and give it a description.</li>
+          <li>Click 'Create repository'.</li>
+      </ol>
+
+      <h2 class="mt-4">Step 3: Adding Code to Your Repository</h2>
+      <p>Let's add some code to your new repo! You should have some files that you have already made in a folder for the assignments and you will want to make sure in the terminal you're in the correct folder before you setup the repository locally. When we say locally we mean on your computer. When we say remotely we mean on GitHub's website.</p>
+      <p>If you haven't started a project or don't already have a folder with files in it, you can create a new file in your repository by clicking on the 'Add file' button and selecting 'Create new file'.</p>
+
+      <h2 class="mt-4">Step 4: Using Git with GitHub</h2>
+      <p>Git is a tool that helps you track changes in your code. It works hand-in-hand with GitHub.</p>
+      <p>The first time you setup a new repository you will have a list of commands that github will show you on the website. You will want to copy and paste those into your terminal one by one, if your using Mac ignore the 'Echo' command that comes first. Additionally you can use a "." instead of README.MD if you want to go on and send up all your files. It will look something like this:</p> 
+      <img src="./images/githubsetupcommandsfromsite.png" class="pb-5"/>
+      <p>These commands will:
+
+      </p>
+      <ul>
+        <li>Set up a new local Git repository These are the files that make up your project, and the changes that you make to them.</li>
+        <li>Add all your files to it. That is specifically what the "." is for. You will need to replace the README.MD in the Add command to do that. Otherwise it will only add a README file to the repo. </li>
+        <li>Save your changes with a message. This is what we call the commit message. It's important to write a good commit message so you can tell what changes you made.</li>
+        <li>Connect your local code to GitHub.</li>
+        <li>Send your code to GitHub.</li>
+    </ul>
+      <p>Those commands are only done the first time when you setup your repository the first time. After that the basic commands will look like the ones below: </p>
+
+              <pre><code class="language-bash">
+git add .
+git commit -m "Commit Message Here"
+git push 
+</code></pre>
+<p>While primarily in this bootcamp we will use GitHub for pushing your assignments up, it is best practice to push your code up often. Take advantage of the security that GitHub offers and use the ability to backup remotely for free!</p>
+  
+
+      <h2 class="mt-4">Why Use GitHub?</h2>
+      <p>With GitHub, you can:
+      <ul>
+          <li>Save versions of your code, so you can go back if something breaks.</li>
+          <li>Work with other people easily.</li>
+          <li>Share your work with your Mentor, Teachers, or even peers in the help channel so they can see all the code and pull it down to find the problems.</li>
+          <li>Show off your work to the world!</li>
+      </ul>
+      </p>
+
+      <h2 class="mt-4">Next Steps</h2>
+      <p>Now that you know the basics, keep practicing and exploring. GitHub has a lot to offer. Happy coding!</p>
+  </div>
+  <div class="container mx-auto border border-2 rounded-3 shadow-lg m-4">
+  <div class="row">
+    <h1 class="text-center mt-5 display-1">Who is Mona the OctoCat?</h1>
+    <div class="col-sm-12 col-md-4">
+      <img src="https://cameronmcefee.com/img/work/the-octocat/original.jpg" class="img-fluid" alt="Mona the OctoCat">
+
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <p>GitHub's mascot is an anthropomorphized "octocat" with five octopus-like arms. The character was created by graphic designer Simon Oxley as clip art to sell on iStock, a website that enables designers to market royalty-free digital images. GitHub became interested in Oxley's work after Twitter selected a bird he designed for their logo. The illustration GitHub chose was a character that Oxley had named Octopuss. Since GitHub wanted Octopuss for their logo (a use that the iStock license disallows), they negotiated with Oxley to buy exclusive rights to the image.</p>
+
+       <p>GitHub renamed Octopuss to Octocat, and trademarked the character along with the new name. Later, GitHub hired illustrator Cameron McEfee to adapt Octocat for different purposes on the website and promotional materials; McEfee and various GitHub users have since created hundreds of variations of the character, which are available on The Octodex.</p>
+       <p><a href="https://en.wikipedia.org/wiki/GitHub#Mascot" target="_blank"><button class="btn btn-outline-light">The above was directly from the Wikipedia page on Mona, located here.</button></a></p>
+    </div>
+  </div>
+</div>
+
+<!-- !SECTION end Main Content -->
+<script src="prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
