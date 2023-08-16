@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <link href="../prism.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container mukataFont">
+  <div class="row">
+    <h1 class="display-4 text-center">Concatenation in JavaScript</h1>
+
+    <p>Concatenation is a fancy word for joining things together, and in the world of JavaScript, it means connecting strings of text. Imagine you have different words or sentences and you want to link them to make a complete thought, just like building a train by connecting carriages. That's what concatenation does! We use it to create personalized messages, assemble sentences from separate pieces, or even add numbers to text. It's like gluing words together to make them say exactly what we want. Whether you're building a greeting for a website visitor or putting together a full paragraph from smaller parts, concatenation is a handy tool that helps you write smarter and more flexible code.</p>
+    <p class="pb-4">There are two ways to concatenate strings in JavaScript: using the plus sign (+) or using template literals. We'll cover both in this lesson.</p>
+
+    <h2>String Concatenation</h2>
+
+    <p>Below is an example of concatenation. The first line creates a variable called <code class="language-javascript">string1</code> and assigns it the value of "Hello, ". The second line creates a variable called <code class="language-javascript">string2</code> and assigns it the value of "World!". The third line creates a variable called <code class="language-javascript">combinedString</code> and assigns it the value of <code class="language-javascript">string1</code> plus <code class="language-javascript">string2</code>. The result is a new string that says "Hello, World!".</p>
+
+    <pre><code class="language-javascript">
+let string1 = "Hello, ";
+let string2 = "World!";
+let combinedString = string1 + string2; // "Hello, World!"
+    </code></pre>
+
+    <h3>Adding a Number to a String</h3>
+
+    <p>Below is an example of concatenation with a number. The first line creates a variable called <code class="language-javascript">string</code> and assigns it the value of "I have ". The second line creates a variable called <code class="language-javascript">number</code> and assigns it the value of 5. The third line creates a variable called <code class="language-javascript">completeSentence</code> and assigns it the value of <code class="language-javascript">string</code> plus <code class="language-javascript">number</code> plus " apples.". The result is a new string that says "I have 5 apples.".</p>
+
+    <pre><code class="language-javascript">
+let string = "I have ";
+let number = 5;
+let completeSentence = string + number + " apples."; // "I have 5 apples."
+    </code></pre>
+
+    <h3>Without Spaces</h3>
+
+    <p>Below is an example of concatenation without spaces. We create a variable called <code class="language-javascript">noSpaces</code> and assign it the value of <code class="language-javascript">"Hello," + "World!"</code> with no spaces left before or after each. Make sure when using concatenation you take this into account to prevent this issue.</p>
+
+    <pre><code class="language-javascript">
+let noSpaces = "Hello," + "World!"; // "Hello,World!"
+    </code></pre>
+
+    <h2>Template Literals</h2>
+
+    <p>Template literals are a new way to write strings in JavaScript. They allow you to write multi-line strings and include variables without having to use concatenation. Template literals are enclosed in backticks (<code class="language-javascript">``</code>) instead of quotes (<code class="language-javascript">""</code> or <code class="language-javascript">''</code>). When you want to include a variable, you use the dollar sign and curly braces (<code class="language-javascript">${}</code>) to wrap the variable name. This is called string interpolation.</p>
+
+    <pre>
+      <code class="language-javascript">
+let name = "Alice";
+let age = 12;
+let introduction = `My name is ${name}, and I am ${age} years old.`; // "My name is Alice, and I am 12 years old."
+    </code></pre>
+
+    <p>With template literals, you can write more complex sentences easily!</p>
+
+
+  </div>
+</div>
+   
+<!-- !SECTION end Main Content -->
+  <script src="prism.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
