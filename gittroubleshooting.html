@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      src="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- SECTION Navbar     -->
+    <div id="nav-placeholder"></div>
+
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("./nav.html");
+      });
+    </script>
+    <!-- !SECTION End Nav -->
+    <!-- SECTION Main Content Goes Below This Line -->
+    <div class="container">
+      <div class="row">
+        <h2 class="fw-bold mb-4 pt-3">1. Git is not recognized as an internal or external command</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> When you type <code>git</code> into the
+          terminal and see an error message saying that <code>git</code> is not
+          recognized, it typically means that Git is not installed or not in
+          your system's PATH.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>
+            First, check if Git is installed by typing
+            <code>git --version</code>. If you get a version number, it means
+            Git is installed.
+          </li>
+          <li>
+            If Git is not installed, download and install it from
+            <a href="https://git-scm.com/">the official website</a>.
+          </li>
+          <li>
+            Ensure that Git is added to your system's PATH. The method to do
+            this varies depending on your operating system.
+          </li>
+        </ol>
+
+        <h2 class="fw-bold mb-4 pt-3">2. Permission denied (publickey) when trying to push or pull</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> You're trying to push or pull to/from a
+          repository, but you get a
+          <code>Permission denied (publickey)</code> error. This means your SSH
+          key isn't being recognized by GitHub.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>First, ensure you have an SSH key generated.</li>
+          <li>If you don't have an SSH key, generate one.</li>
+          <li>Once generated, add your public key to your GitHub account.</li>
+          <li>Ensure your Git client is set up to use SSH.</li>
+        </ol>
+
+        <pre><code class="language-bash">git remote set-url origin git@github.com:USERNAME/REPO_NAME.git</code></pre>
+
+        <h2 class="fw-bold mb-4 pt-3">3. Changes not staged for commit</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> You've modified files but when you run
+          <code>git status</code>, you see a message "Changes not staged for
+          commit".
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>To stage all changes, use the command:</li>
+        </ol>
+
+        <pre><code class="language-bash">git add .</code></pre>
+
+        <ol start="2">
+          <li>To stage specific files, use:</li>
+        </ol>
+
+        <pre><code class="language-bash">git add FILENAME</code></pre>
+
+        <ol start="3">
+          <li>Once staged, you can commit using:</li>
+        </ol>
+
+        <pre><code class="language-bash">git commit -m "Your commit message here"</code></pre>
+        <h2 class="fw-bold mb-4 pt-3">4. Merge Conflicts</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> When merging branches, you sometimes
+          encounter conflicts which Git can't automatically resolve.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>
+            First, identify the conflicted files with <code>git status</code>.
+          </li>
+          <li>
+            Open each conflicted file in a text editor. You'll see conflict
+            markers indicating the differing sections. Manually resolve each
+            conflict by editing the file.
+          </li>
+          <li>
+            After resolving all conflicts in a file, stage the file using:
+          </li>
+        </ol>
+
+        <pre><code class="language-bash">git add FILENAME</code></pre>
+
+        <ol start="4">
+          <li>
+            Once all conflicts are resolved and staged, complete the merge with:
+          </li>
+        </ol>
+
+        <pre><code class="language-bash">git commit</code></pre>
+
+        <h2 class="fw-bold mb-4 pt-3">5. Forgot to Pull Before Pushing</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> You made local changes and tried to push,
+          but received an error because your local version is behind the remote.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>Pull the latest changes from the remote:</li>
+        </ol>
+
+        <pre><code class="language-bash">git pull</code></pre>
+
+        <ol start="2">
+          <li>
+            If there are merge conflicts, resolve them (as described above).
+          </li>
+          <li>Push your changes after resolving conflicts and committing:</li>
+        </ol>
+
+        <pre><code class="language-bash">git push</code></pre>
+
+        <h2 class="fw-bold mb-4 pt-3">6. Accidentally Committed to the Wrong Branch</h2 class="fw-bold mb-4 pt-3">
+        <p>
+          <strong>Problem:</strong> You made a commit, then realized you're on
+          the wrong branch.
+        </p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>Switch to the correct branch:</li>
+        </ol>
+
+        <pre><code class="language-bash">git checkout CORRECT_BRANCH_NAME</code></pre>
+
+        <ol start="2">
+          <li>Cherry-pick the commit to the correct branch:</li>
+        </ol>
+
+        <pre><code class="language-bash">git cherry-pick COMMIT_HASH</code></pre>
+
+        <ol start="3">
+          <li>
+            Return to the wrong branch and reset to the previous commit to undo
+            the mistake:
+          </li>
+        </ol>
+
+        <pre><code class="language-bash">git checkout WRONG_BRANCH_NAME
+git reset HEAD~1</code></pre>
+
+        <h2 class="fw-bold mb-4 pt-3">7. Want to Undo the Last Commit</h2 class="fw-bold mb-4 pt-3">
+        <p><strong>Problem:</strong> You made a commit and want to undo it.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+          <li>To simply undo the last commit but keep the changes:</li>
+        </ol>
+
+        <pre><code class="language-bash">git reset HEAD~1</code></pre>
+
+        <ol start="2">
+          <li>To undo the last commit and discard the changes:</li>
+        </ol>
+
+        <pre><code class="language-bash">git reset --hard HEAD~1</code></pre>
+      </div>
+    </div>
+    <!-- !SECTION end Main Content -->
+    <script src="prism.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

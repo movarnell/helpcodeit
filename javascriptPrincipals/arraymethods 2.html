@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+
+<!-- SECTION Main Content -->
+
+<!-- SECTION Array Methods Table-->
+<div class="container-fluid p-5 table-responsive">
+  <h1 class="text-center pressStartFont">Array Methods</h1>
+  <div class="roundTable">
+<table class="table table-dark table-striped table-bordered tableStyleCustomizations ">
+  <thead>
+    <tr class="text-center fs-4">
+      <th>Method Name</th>
+      <th>Return Value</th>
+      <th>Explanation</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td>push()</td>
+      <td>The modified array</td>
+      <td>Appends one or more elements to the end of the array.</td>
+      <td>let array = [];<br/>
+         array.push("hello", "world");<br/>
+         <span style="color: yellowgreen">["hello", "world"]</span> </td>
+    </tr>
+    <tr>
+      <td>pop()</td>
+      <td>The removed element</td>
+      <td>Removes the last element from the array and returns it.</td>
+      <td>let array = [ 1, 2, 3]<br/>
+        const lastElement = arr.pop();<br/>
+        <span style="color: yellowgreen">[3]</span></td>
+    </tr>
+    <tr>
+      <td>shift()</td>
+      <td>The removed element</td>
+      <td>Removes the first element from the array and returns it.</td>
+      <td>let array = [1,2,3];<br/>
+        const firstElement = array.shift();<br/>
+        <span style="color: yellowgreen">[1]</span></td>
+    </tr>
+    <tr>
+      <td>unshift()</td>
+      <td>The modified array</td>
+      <td>Prepends one or more elements to the beginning of the array.</td>
+      <td>let array =[1,2,3];<br/>
+        array.unshift("hello", "world");<br/>
+        <span style="color: yellowgreen">["hello", "world", 1, 2, 3]</td>
+    </tr>
+    <tr>
+      <td>splice()</td>
+      <td>A new array with the removed elements</td>
+      <td>Removes elements from the array and optionally inserts new elements at the specified indexes.</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.splice(1, 2, "hello", "world");<br/>
+        <span style="color: yellowgreen">["world", "welcome"]</span></td>
+    </tr>
+    <tr>
+      <td>slice()</td>
+      <td>A new array with the specified elements</td>
+      <td>Copies a section of the array and returns it.</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.slice(1, 3);<br/>
+        <span style="color: yellowgreen">["world", "welcome"]</span></td>
+    </tr>
+    <tr>
+      <td>concat()</td>
+      <td>A new array with the concatenated arrays</td>
+      <td>Concatenates two or more arrays and returns a new array.</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newArray = array.concat(["hello", "world"]);<br/>
+        <span style="color: yellowgreen">["hello", "world", "welcome", "home", "hello", "world"]</span></td>
+    </tr>
+    <tr>
+      <td>join()</td>
+      <td>A string with the elements of the array</td>
+      <td>Joins the elements of the array into a string.</td>
+      <td>let array = ["hello", "world", "welcome", "home"]<br/>
+        const newString = array.join(" ");<br/>
+        <span style="color: yellowgreen">"hello world welcome home"</span></td>
+    </tr>
+    <tr>
+      <td>map()</td>
+      <td>A new array with the results of the function</td>
+      <td>Applies a function to each element of the array and returns a new array with the results.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const newArray = array.map(element => element * 2);<br/>
+        <span style="color: yellowgreen">[2, 4, 6, 8, 10]</span></td>  
+      </td>
+    </tr>
+    <tr>
+      <td>filter()</td>
+      <td>A new array with the elements that pass the test</td>
+      <td>Creates a new array with the elements of the original array that pass a test.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const newArray = array.filter(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">[2, 4]</span></td>
+    </tr>
+    <tr>
+      <td>reduce()</td>
+      <td>The accumulated value</td>
+      <td>Reduces the array to a single value by applying a function to each element and accumulating the results.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const sum = array.reduce((accumulator, element) => accumulator + element, 0);<br/>
+        <span style="color: yellowgreen">15</span></td>
+    </tr>
+    <tr>
+      <td>reduceRight()</td>
+      <td>The accumulated value</td>
+      <td>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const sum = array.reduceRight((accumulator, element) => accumulator + element, 0);<br/>
+        <span style="color: yellowgreen">15</span></td>
+    </tr>
+    <tr>
+      <td>every()</td>
+      <td>True or false</td>
+      <td>Tests whether all elements in the array pass the test implemented by the provided function.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const allEven = array.every(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">false</span></td>
+
+      </td>
+    </tr>
+    <tr>
+      <td>some()</td>
+      <td>True or false</td>
+      <td>Tests whether some element in the array passes the test implemented by the provided function.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const someEven = array.some(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">true</span></td>
+    </tr>
+    <tr>
+      <td>includes()</td>
+      <td>True or false</td>
+      <td>Tests whether the array contains the specified element.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const hasTwo = array.includes(2);<br/>
+        <span style="color: yellowgreen">true</span></td>
+    </tr>
+    <tr>
+      <td>indexOf()</td>
+      <td>The index of the element</td>
+      <td>Returns the first index of the specified element in the array.</td>
+      <td>let array = [1, 2, 3, 4, 5]<br/>
+        const index = array.indexOf(2);<br/>
+        <span style="color: yellowgreen">1</span>
+      </td>
+    </tr>
+    <tr>
+      <td>lastIndexOf()</td>
+      <td>The index of the element</td>
+      <td>Returns the last index of the specified element in the array.</td>
+      <td>let array = [1, 2, 3, 4, 5]<br/>
+        const index = array.lastIndexOf(2);<br/>
+        <span style="color: yellowgreen">1</span>
+    </tr>
+    <tr>
+      <td>find()</td>
+      <td>The value of the element</td>
+      <td>Returns the value of the first element in the array that satisfies the provided testing function.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const element = array.find(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">2</span></td>
+    </tr>
+    <tr>
+      <td>findIndex()</td>
+      <td>The index of the element</td>
+      <td>Returns the index of the first element in the array that satisfies the provided testing function.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        const index = array.findIndex(element => element % 2 === 0);<br/>
+        <span style="color: yellowgreen">1</span></td>
+    </tr>
+    <tr>
+      <td>sort()</td>
+      <td>The modified array</td>
+      <td>Sorts the elements of the array in place.</td>
+      <td>let array = ["e", "r" , "d", "v", "a"];<br/>
+        array.sort();<br/>
+        <span style="color: yellowgreen">["a", "d", "e", "r", "v"]</span></td>
+    </tr>
+    <tr>
+      <td>reverse()</td>
+      <td>The modified array</td>
+      <td>Reverses the order of the elements of the array in place.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.reverse();<br/>
+        <span style="color: yellowgreen">[5, 4, 3, 2, 1]</span></td>
+    </tr>
+    <tr>
+      <td>fill()</td>
+      <td>The modified array</td>
+      <td>Fills all the elements of the array from a start index to an end index with a static value.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.fill(0, 1, 3);<br/>
+        <span style="color: yellowgreen">[1, 0, 0, 4, 5]</span></td>
+    </tr>
+    <tr>
+      <td>copyWithin()</td>
+      <td>The modified array</td>
+      <td>Copies a sequence of array elements within the array.</td>
+      <td>let array = [1, 2, 3, 4, 5];<br/>
+        array.copyWithin(0, 3);<br/>
+        <span style="color: yellowgreen">[4, 5, 3, 4, 5]</span></td>
+    </tr>
+    <tr>
+      <td>flat()</td>
+      <td>A new array with the sub-array elements concatenated</td>
+      <td>Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</td>
+      <td>const arr = [1, 2, [3, 4]];<br/>
+        arr.flat();<br/>
+        <span style="color: yellowgreen">[1, 2, 3, 4]</span></td>
+    </tr>
+    <tr>
+      <td>flatMap()</td>
+      <td>A new array with the sub-array elements concatenated</td>
+      <td>Maps each element using a mapping function, then flattens the result into a new array.</td>
+      <td>const arr = [1, 2, 3, 4];<br/>
+        arr.flatMap(x => [x * 2]);<br/>
+        <span style="color: yellowgreen">[2, 4, 6, 8]</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<!-- !SECTION end Array Methods -->
+ 
+
+
+
+
+<!-- !SECTION end Main Content -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
