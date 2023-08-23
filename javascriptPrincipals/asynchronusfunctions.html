@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Async/Await</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+
+<div class="container">
+    <h1 class="text-center fw-bolder display-1 pt-5 pb-5">Asynchronous Functions</h1>
+    <h2>Understanding Promises:</h2>
+    <p>
+        Before diving into <code>async/await</code>, it's essential to understand Promises because <code>async/await</code> is built on top of them. A Promise is an object that represents the eventual completion or failure of an asynchronous operation. It can be in one of the following states:
+
+        <ul>
+            <li><strong>Pending:</strong> Initial state, neither fulfilled nor rejected.</li>
+            <li><strong>Fulfilled:</strong> The operation completed successfully.</li>
+            <li><strong>Rejected:</strong> The operation failed.</li>
+        </ul>
+
+        A Promise is created using the <code>Promise</code> constructor. It takes a callback function with two parameters, <code>resolve</code> and <code>reject</code>. The <code>resolve</code> parameter is a function that is called when the Promise is fulfilled, while <code>reject</code> is called when the Promise is rejected.
+    </p>
+    <p>We will often use this as a way to make an API call to a server. The <code>resolve</code> function will be called when the API call is successful, and the <code>reject</code> function will be called when the API call fails, but it can be used for anything that may take time to complete.</p>
+
+    
+    <pre><code class="language-javascript">
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise resolved!");
+        // reject("Promise rejected!");
+    }, 2000);
+});
+
+promise.then(result => {
+    console.log(result);
+}).catch(error => {
+    console.error(error);
+});
+    </code></pre>
+
+    <div class="container ps-4 pe-4 pb-4 pt-2 mt-5 mb-5 border border-1 border-black shadow-lg">
+        <p>
+            <h2 class="fw-bolder"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="0.75em" class="mb-1" width="0.75em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M15,17.0002864 C15,14.0000003 19,12.0005727 19,8.00028636 C19,4.00000002 16,1.00028636 12,1.00028636 C8,1.00028636 5,4.00000002 5,8.00028636 C5,12.0005727 9,14.0000003 9,17.0002864 C9,20.0005725 9,20 9,20 C9,22.0000003 10,22.9999997 12,23 C14,23.0000003 15,22.0000003 15,20 C15,20 15,20.0005725 15,17.0002864 Z M9,18 L15,18"></path></svg> Key Terms</h2>
+            <ul class="fs-5">
+            <li><strong>Async:</strong> The <code>async</code> keyword is used to define an asynchronous function. It can be used with any function declaration or expression. It means to run at the same time as other operations.</li>
+            <li><strong>Await:</strong> The <code>await</code> keyword is used to wait for a Promise to resolve or reject. It can only be used inside an <code>async</code> function. It means to wait for something to happen.</li>
+            <li><strong>Syntactic Sugar:</strong> A feature that only changes how you type something, but nothing changes under the hood.</li>
+        </ul>
+    
+    </p>
+    </div>
+
+    <h2>Introducing <code>async/await</code>:</h2>
+    <p>
+        <code>async/await</code> is syntactic sugar over Promises. An <code>async</code> function always returns a promise, while <code>await</code> is used to wait for the Promise to resolve or reject.
+    </p>
+    <p>
+        The <code>async</code> keyword is used to define an asynchronous function. It can be used with any function declaration or expression. The <code>await</code> keyword is used to wait for a Promise to resolve or reject. It can only be used inside an <code>async</code> function.
+    </p>
+   
+    <pre><code class="language-javascript">
+async function fetchData() {
+    let response = await fetch('https://api.example.com/data');
+    let data = await response.json();
+    return data;
+}
+
+fetchData().then(data => {
+    console.log(data);
+}).catch(error => {
+    console.error(error);
+});
+    </code></pre>
+
+    <h2>Error Handling:</h2>
+    <p>
+        You can use try/catch blocks to handle errors in async functions.
+    </p>
+    <pre><code class="language-javascript">
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data: ", error);
+        throw error;  // Re-throwing so the caller knows about the error.
+    }
+}
+
+fetchData().then(data => {
+    console.log(data);
+}).catch(error => {
+    console.error("Error in calling fetchData: ", error);
+});
+    </code></pre>
+
+    <h2>Tips:</h2>
+    <ol>
+        <li><strong>Don't forget to handle errors:</strong> As shown, use <code>try/catch</code> inside <code>async</code> functions and <code>.catch()</code> outside to handle rejections.</li>
+        <li><strong>Avoid using <code>await</code> inside loops:</strong> This might slow down your code, especially if each iteration doesn't depend on the result of the previous one. Instead, use <code>Promise.all()</code> to wait for multiple promises to complete.</li>
+    </ol>
+
+    <h2>Conclusion:</h2>
+    <p>
+        <code>async/await</code> simplifies the process of working with promises. While it doesn't add new functionality, it makes your asynchronous code look and feel more synchronous, leading to cleaner and more intuitive code.
+    </p>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
