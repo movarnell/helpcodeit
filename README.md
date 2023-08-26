@@ -5,7 +5,7 @@ This is an open-source website designed to assist beginning coders, especially t
 
 ## Project Structure
 
-- **HTML Files**: `index.html`, `about.html`, `TEMPLATEPAGE copy 2.html`, `stringConcatenation.html`, and `nav.html`
+- **HTML Files**: `index.html`, `about.html`, `TEMPLATEPAGE.html`, `stringConcatenation.html`, and `nav.html` Others are included in Directories
 - **Styles**: `style.css` and `prism.css`
 - **JavaScript**: `index.js` and `prism.js`
 - **Assets**: 
@@ -20,7 +20,7 @@ This is an open-source website designed to assist beginning coders, especially t
 
 1. Clone the repository:
 ```
-git clone <repository_link>
+git clone https://github.com/movarnell/helpcodeit
 ```
 2. Navigate to the project directory:
 ```
@@ -33,7 +33,7 @@ npm install
 
 ## Usage
 
-Open `index.html` in your preferred browser to view the main page. Navigate through the site using the provided links.
+Go to https://helpcodeit.com in your preferred browser to view the main page. Navigate through the site using the provided links.
 
 ## How to Contribute
 
