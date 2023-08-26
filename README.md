@@ -1,24 +1,56 @@
+
 # helpcodeit
-This is an open source website to help beginning coders with Promineo Tech, as well as others get core concepts for front end development. Anyone may contribute. There is no grade assigned and any work on this is strictly for experience and learning. Once you have had a successful pull request add your name to the list of contributors below. You can contribute at any level you wish. If you want to contribute something not listed in the issues page feel free to add your own issue, and we will approve or deny it based on the usefulness to the mission of the site. 
-If you wish to add new pages make sure you use the template to keep the styling the same, and to keep the navbar uniform across the site. 
 
-## How to contribute
-1. Look at the list of issues and pick one that you would like to work on. 
-2. Fork the repository - to do this you will need to click the fork button in the top right corner of the page.
-3. Create a new branch - to do this you will need to click the branch button and type in a name for your branch.
-4. Clone the repository - to do this you will need to click the green code button and copy the link. Then in your terminal type `git clone <link from your repo that you forked>`.
-5. Make your changes - make sure you are working on your branch and not the main branch.
-6. Commit your changes - to do this you will need to type `git add .` then `git commit -m "your message here"`.
-7. Push your changes - to do this you will need to type `git push origin <name of your branch>`.
-8. Create a pull request - to do this you will need to go to the pull requests tab and click the new pull request button. Then click the compare across forks button. Then select your fork and your branch. Then click create pull request.
-9. Done! Add your name to the list of contributors below and enjoy your new experience!
+This is an open-source website designed to assist beginning coders, especially those associated with Promineo Tech, in grasping core concepts of front-end development. The project welcomes contributions from everyone. There is no grade assigned, and any participation is strictly for experience and learning. Once your pull request is merged successfully, please add your name to the list of contributors.
 
+## Project Structure
 
+- **HTML Files**: `index.html`, `about.html`, `TEMPLATEPAGE copy 2.html`, `stringConcatenation.html`, and `nav.html`
+- **Styles**: `style.css` and `prism.css`
+- **JavaScript**: `index.js` and `prism.js`
+- **Assets**: 
+  - `images`: Contains image assets.
+  - `video`: Possibly houses video files.
+- **Directories**:
+  - `gettingStarted`: Introductory resources or content.
+  - `javascriptPrincipals`: Content or resources related to JavaScript.
+  - `node_modules`: Contains npm packages.
 
+## Setup & Installation
 
+1. Clone the repository:
+```
+git clone <repository_link>
+```
+2. Navigate to the project directory:
+```
+cd helpcodeit
+```
+3. If you need to install dependencies:
+```
+npm install
+```
 
+## Usage
 
-After your contribution is merged add your name below. 
-## contributors
-Michael Varnell
-MORE WANTED...
+Open `index.html` in your preferred browser to view the main page. Navigate through the site using the provided links.
+
+## How to Contribute
+
+1. Review the list of issues and select one you'd like to address.
+2. Fork the repository.
+3. Create a new branch.
+4. Clone your forked repository.
+5. Make your changes on your branch.
+6. Commit and push your changes.
+7. Create a pull request.
+8. Once merged, add your name to the list of contributors.
+
+## Contributors
+
+- Michael Varnell
+- ... [Your Name Here]
+
+## License
+
+This project is open-source. Please ensure you provide appropriate attribution, linking back to this repository.
