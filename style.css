@@ -164,3 +164,13 @@ td {
 .mukataFont {
     font-family: 'Mukta', sans-serif;
 }
+code, pre {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
+	hyphens: none;
+    font-size: .75rem;
+}
+
+pre {
+	max-height: 30em;
+	overflow: auto;
+}

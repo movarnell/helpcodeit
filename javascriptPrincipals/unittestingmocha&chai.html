@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Unit Testing with Mocha & Chai</h1>
+    <h2 class="text-center">What is Unit Testing?</h2>
+    <p class="text-center">Unit testing is a type of software testing where individual units or components of a software are tested. The purpose is to validate that each unit of the software code performs as expected. Unit Testing is done during the development (coding phase) of an application by the developers.</p>
+    <h2 class="text-center">What is Mocha?</h2>
+    <p class="text-center">Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.</p>
+    <a href="https://mochajs.org/" target="_blank" class="text-center">
+    <button class="btn btn-outline-info">Mocha Documentation</button>
+    </a>
+    <h2 class="text-center">What is Chai?</h2>
+    <p class="text-center">Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.</p>
+    <a href="https://www.chaijs.com/api/bdd/" target="_blank" class="text-center">
+    <button class="btn btn-outline-info">Chai Documentation</button>
+    </a>
+  </div>
+  <div class="row">
+    <video class="mx-auto d-block m-3" width="mx-auto" height="my-auto" controls>
+      <source src="./video/m&cunittesting.mp4" type="video/mp4">
+  </div>
+  <div class="row">
+    <h2 class="text-center">How to Install Mocha & Chai</h2>
+    <p class="text-center">To install Mocha & Chai you will need to have Node.js installed on your computer. If you do not have Node.js installed you can download it <a href="https://nodejs.org/en/download/" target="_blank">here</a>. Once you have Node.js installed you can install Mocha & Chai by opening your terminal and typing the following command.</p>
+    <pre><code class="lang-shell">
+    npm i mocha chai
+    </code></pre>
+  </div>
+  <h4 class="text-center">This goes inside the Head tags of your HTML testing page. </h4>
+  <pre><code class="lang-html">
+   
+    &lt;link rel="stylesheet" href="node_modules/mocha/mocha.css"/>
+    
+    </code></pre>
+
+  <h4 class="text-center">Body of the HTML for the testing HTML File</h4>
+  <pre><code class="lang-html">
+   
+    &lt;div id="mocha">
+    &lt;p>
+    &lt;a href=".">Index&lt;/a>
+    &lt;/p>
+    &lt;/div>
+    &lt;div id="messages">&lt;/div>
+    &lt;div id="fixtures">&lt;/div>
+    &lt;script src="node_modules/mocha/mocha.js">&lt;/script>
+    &lt;script src="node_modules/chai/chai.js">&lt;/script>
+    &lt;script src="index.js">&lt;/script>
+    &lt;script>mocha.setup('bdd')&lt;/script>
+    &lt;script src="index.test.js">&lt;/script>
+    &lt;script>mocha.run();&lt;/script>
+    
+    </code></pre>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
