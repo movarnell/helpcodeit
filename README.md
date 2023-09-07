@@ -90,21 +90,7 @@ Review the list of issues and select one you'd like to address OR add a HTML pag
 
 4. **Submit the Pull Request**  
    Add any additional comments and click `Create Pull Request`.
-## Setup & Installation
 
-1. Clone the repository:
-```
-git clone https://github.com/movarnell/helpcodeit
-```
-2. Navigate to the project directory:
-```
-cd helpcodeit
-```
-3. If you need to install dependencies:
-```
-npm install
-```
-Don't forget to add your name to the list of Contributors below!
 ## Usage
 
 Go to https://helpcodeit.com in your preferred browser to view the main page. Navigate through the site using the provided links.
