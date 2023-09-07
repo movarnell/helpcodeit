@@ -1,13 +1,22 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+  
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
 td {
     vertical-align: middle;
 }
 
 .navIcon {
-    width: 100px;
-    height: 100px;
+    width: 3em;
+    height: 3em;
     background-color: black;
     padding:.5rem  
 }
@@ -164,6 +173,11 @@ td {
 .mukataFont {
     font-family: 'Mukta', sans-serif;
 }
+
+.satisfyFont {
+    font-family: 'Satisfy', cursive;
+}
+
 code, pre {
 	font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
 	hyphens: none;
@@ -174,3 +188,9 @@ pre {
 	max-height: 30em;
 	overflow: auto;
 }
+
+.communityText {
+    font-size: 1.1rem;
+    text-align: start;
+}
+
