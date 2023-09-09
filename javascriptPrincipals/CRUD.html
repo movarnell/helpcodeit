@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container robotoSlabFont">
+<h1 class="text-center display-2" id="top">Fetch API Examples</h1>
+<h2 class="text-center">What is the Fetch API?</h2>
+<div class="text-center"><img src="../images/fetchdog.svg" alt="Dog Fetching Ball Graphic" >
+    <hr>
+</div>
+<p>The Fetch API is a modern interface that allows you to make HTTP requests to servers from web browsers. It provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+<p>Usually when you send your data to a server, you use the HTTP POST method. This method is used to send data to the server to create or update a resource. The data sent to the server is stored in the request body of the HTTP request. The POST method is one of the most common HTTP methods.</p>
+<p>When you send data to a server using the HTTP POST method, the data is sent in the request body of the HTTP request. The data sent to the server is stored in the request body of the HTTP request. The POST method is one of the most common HTTP methods.</p>
+<h2>How the Data is Formatted: JSON</h2>
+<h4>When we send and recieve data we will need it formatted specifically for what the API will expect.</h4>
+<p>We will structure the data as JSON, which stands for JavaScript Object Notation. JSON is a lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate. JSON is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.</p>
+<h4>JSON is built on two structures:</h4>
+<ol>
+<li>A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.</li>
+<li>An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.</li>
+</ol>
+<p>These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures.</p>
+<p>Below is an example of a JSON object:</p>
+    <pre>
+        <code class="language-javascript">
+let person = {
+    "firstName": "John",
+    "lastName": "Smith",
+    "isAlive": true,
+    "age": 27,
+    "address": {
+        "streetAddress": "21 2nd Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10021-3100"
+    }
+}
+        </code>
+    </pre>
+<p>Below is an example of a JSON array:</p>
+    <pre>
+        <code class="language-javascript">
+let people = [
+            {
+                "firstName": "John",
+                "lastName": "Smith",
+            },
+            {
+                "firstName": "Jane",
+                "lastName": "Doe",
+            },
+            {
+                "firstName": "Jack",
+                "lastName": "Jones",
+            }
+        ]
+        </code>
+    </pre>
+    <h3 class="mt-5">Doing a POST request</h3>
+    <p><strong>Sends new data to the server</strong></p>
+    <p>When doing a POST request, you need to specify the method, headers, and body. The method is the HTTP method you are using, in this case POST. The headers are the headers you are sending to the server. The body is the data you are sending to the server.</p>
+    <h4>Below is an example of a POST request:</h4>
+    <pre>
+        <code class="language-javascript">
+    
+        // POST Request
+        // Sends new data to the server
+        fetch('https://api.example.com/items', {
+          method: 'POST',  // Specify the method
+          headers: {
+            'Content-Type': 'application/json',  // Set content type to JSON
+          },
+          body: JSON.stringify({key: 'value'}),  // Data payload
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
+    </code>
+    </pre>
+    <h3 class="mt-5">The GET request</h3>
+    <p><strong>Fetches data from the server</strong></p>
+    <p>When doing a GET request, you need to specify the method and headers. The method is the HTTP method you are using, in this case GET. The headers are the headers you are sending to the server.</p>
+    <h2>Below is an example of a GET request:</h2>
+<pre>
+  <code class="language-javascript">
+    // GET Request
+    // Fetches data from the specified URL
+    fetch('https://api.example.com/items')
+      .then(response => response.json())  // Parse JSON data from response
+      .then(data => console.log(data))    // Log the parsed data
+      .catch((error) => console.error('Error:', error));
+    </code>
+</pre>
+<h5 class="mt-5 fw-bold">When You recieve the data back from a GET request, it be in JSON format and will look similar to this:</h5>
+<pre>
+    <code class="language-javascript">
+    {
+      "id": 1,
+      "name": "A green door",
+      "price": 12.50,
+      "tags": ["home", "green"]
+    }
+    </code>
+</pre>
+<div class="row">
+    <div class="m-2 p-4 mb-5 border border-1 border-danger-subtle rounded-5 customBoxShadow">
+    <h3 class="text-center fw-bolder"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M1,5 C1,3.00000024 2,1 3,1 C3,1 5,5 5,5 L7,5 C7,5 9,1 9,1 C10,1 11,3.00000006 11,5 C11,7.25400025 10,9.0000003 8,10 L8,21 C8,22 8,23 6,23 C4,23 4,22 4,21 L4,10 C2,9.0000003 1,7.25400042 1,5 Z M19,12 L19,18 M17,18 L18,23 L20,23 L21,18 L17,18 Z M14,12 L24,12 L14,12 Z M21,12 L21,3 C21,1.895 20.105,1 19,1 C17.895,1 17,1.895 17,3 L17,12"></path></svg>  Troubleshooting Fetch Requests brand Displaying/Using the Response</h3>
+<p class="mt-3">You will recieve the data back after the rest of your code displaying the page has run. This is why you need to use the .then() method to get the data back.</p>
+<p>If you don't set it up as a promise, everywhere you tried to use the data will return <strong>'undefined'</strong>. This will break the code. </p>
+<p>You will want to make sure your promise is setup correct so the data is displayed correctly. If you do a POST request, you will need to make sure that you have the GET request that displays the data after the POST request is complete.</p> 
+<p>For this reason most of the time I will make sure I include the GET request in the .then() method of the POST request. This way I know the data will be displayed correctly.</p>
+<p>If your data is not displaying correctly, you will want to make sure you have the correct URL in your fetch request. You will also want to make sure you have the correct headers and body.</p>
+<p>
+Another useful troubleshooting tip is to console out the data you are getting back from the server. This will help you see if you are getting the correct data back from the server.</p>
+</div>
+</div>
+<h3>PUT Request</h3>
+<p><strong>Updates existing data on the server</strong></p>
+<p>The PUT request is used to update existing data on the server. The PUT request is similar to the POST request, except that it is used to update existing data on the server instead of creating new data.</p>
+<p>You will identify the data you want to update by using the ID of the data. The ID is a unique identifier that is assigned to each piece of data on the server. You will need to specify the ID of the data you want to update in the URL of the PUT request.</p>
+<p>Below is an example of a PUT request:</p>
+<pre>
+    <code class="language-javascript">
+
+    // PUT Request
+    // Updates existing data on the server
+    fetch('https://api.example.com/items/1', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({key: 'new_value'}),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+</code>
+</pre>
+<h3 class="mt-5">DELETE Request</h3>
+<p><strong>Removes data from the server</strong></p>
+<p>The DELETE request is used to remove data from the server. The DELETE request is similar to the POST request, except that it is used to remove data from the server instead of creating new data.</p>
+<p>The DELETE is simple in nature like the GET is, in that you only need to specify the method and headers. The DELETE request is similar to the GET request, except that it is used to remove data from the server instead of fetching data from the server.</p>
+<p>You will want to render the data after the DELETE request is complete. This way you know the data has been removed from the server.</p>
+<p>You can do that by using the .then() method to render the data after the DELETE request is complete.</p>
+<p>Below is an example of a DELETE request:</p>
+<pre>
+    <code class="language-javascript">
+
+    // DELETE Request
+    // Removes data from the server
+    fetch('https://api.example.com/items/1', {
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+  </code>
+</pre>
+<h3 class="mt-5">Handling Errors</h3>
+<p><strong>Handling errors is an important part of any application. You will want to make sure you handle errors correctly so your application doesn't break.</strong></p>
+<p>When you are doing a fetch request, you will want to make sure you handle errors correctly. You will want to make sure you handle errors correctly so your application doesn't break.</p>
+<p>We do this by using the .catch() method. The .catch() method is used to catch any errors that occur during the fetch request.</p>
+<p>Below is an example of a fetch request that handles errors:</p>
+<pre>
+    <code class="language-javascript">
+
+    // Fetch Request
+    // Handles errors
+    fetch('https://api.example.com/items')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((error) => console.error('Error:', error));
+  </code>
+</pre>
+<h2 class="mt-5">Using the Fetch API with React</h2>
+<p><strong>Using the Fetch API with React is very similar to using the Fetch API with JavaScript. The only difference is that you will need to use the useEffect() hook to make the fetch request.</strong></p>
+<p>When you are using the Fetch API with React, you will need to use the useEffect() hook to make the fetch request. The useEffect() hook is used to run code after the component has rendered.</p>
+<p>Below is an example of a fetch request using the useEffect() hook:</p>
+<pre>
+    <code class="language-javascript">
+
+    // Fetch Request
+    // Using the useEffect() hook
+    useEffect(() => {
+      fetch('https://api.example.com/items')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
+    }, []);
+  </code>
+</pre>
+<h2 class="mt-5">Using the Fetch API with React Hooks</h2>
+<p><strong>Using the Fetch API with React Hooks is very similar to using the Fetch API with React. The only difference is that you will need to use the useState() hook to store the data.</strong></p>
+<p>When you are using the Fetch API with React Hooks, you will need to use the useState() hook to store the data. The useState() hook is used to store the data in the state of the component.</p>
+<p>Below is an example of a fetch request using the useState() hook:</p>
+<pre>
+    <code class="language-javascript">
+
+    // Fetch Request
+    // Using the useState() hook
+    const [data, setData] = useState([]);
+    useEffect(() => {
+      fetch('https://api.example.com/items')
+        .then(response => response.json())
+        .then(data => setData(data))
+        .catch((error) => console.error('Error:', error));
+    }, []);
+  </code>
+</pre>
+<div class="border border-2 border-black rounded-5 p-5 pt-0 customBoxShadow mb-5">
+<h2 class="text-center mt-5 fw-bolder">Example Repositories and Useful Links</h2>
+<ul class="list-group pb-4">
+    <li class="list-group-item"><a href="https://github.com/movarnell/Fetch-Example-with-delete--get--post.git" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">GitHub Repository: Fetch Example with delete, get, post</a></li>
+    <li class="list-group-item"><a href="https://github.com/movarnell/apiplay" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">GitHub Repository: API Play</a> This one uses a weather API to pull weather data and display it.</li>
+    <li class="list-group-item"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">MDN: Using Fetch</a> This is the Mozilla Documentation on the using fetch</li>
+    <li class="list-group-item"><a href="https://www.rapidapi.com" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">Rapid API</a> This is a great place to find APIs to use in your projects.</li>
+    <li class="list-group-item"><a href="https://drive.google.com/file/d/1X2iq98yhHyLWFwX8Mn4UAVuPAyY2qSsH/view" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">Matthew's C.R.U.D Slides</a> These walk through the process of use with Mock API.</li>
+    <li class="list-group-item"><a href="https://www.mockapi.io" target="_blank" class="text-decoration-none fw-bolder" style="
+        font-size: 1.4rem;">MockAPI.io</a> Free API to use to build out projects. Cheap yearly price for advanced features. </li>
+    <li class="list-group-item"><a href="https://github.com/public-apis-dev/public-apis" target="_blank" class="text-decoration-none fw-bolder" style="
+    font-size: 1.4rem;">GitHub: Public API's Dev</a> This is a list of public use API's that you can use in your projects.</li>
+</ul>
+
+</div>
+</div>
+<div class="text-center text-decoration-none fw-bolder display-6 pb-5"><a href="#top">Back to Top <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 5.854a.5.5 0 000-.708l-3-3a.5.5 0 00-.708 0l-3 3a.5.5 0 10.708.708L8 3.207l2.646 2.647a.5.5 0 00.708 0z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M8 10a.5.5 0 00.5-.5V3a.5.5 0 00-1 0v6.5a.5.5 0 00.5.5zm-4.8 1.6c0-.22.18-.4.4-.4h8.8a.4.4 0 010 .8H3.6a.4.4 0 01-.4-.4z" clip-rule="evenodd"></path></svg></a></div>
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
