@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container pb-5">
+  <div class="row justify-content-around m-5">
+<h1 class="text-center display-4 pt-5 pb-5">Key Terms for CSS</h1>
+<div class="termsFont">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <h2>Selector</h2>
+            <p>A selector is an element that specifies which elements in a document the CSS rule applies to. Selectors can be based on element names, classes, IDs, attributes, and more.</p>
+            <pre><code class="language-css">
+/* Selects all <p> elements */
+p {
+  color: red;
+}
+
+/* Selects all elements with class "example" */
+.example {
+  color: blue;
+}
+
+/* Selects the element with ID "main" */
+#main {
+  color: green;
+}
+            </code></pre>
+        </li>
+        <li class="list-group-item">
+            <h2>Property</h2>
+            <p>A property is a specific characteristic of an element that can be styled with CSS. Properties include things like color, font-size, and margin.</p>
+            <pre><code class="language-css">
+/* Sets the color of all <p> elements to red */
+p {
+  color: red;
+}
+
+/* Sets the font-size of all elements with class "example" to 16px */
+.example {
+  font-size: 16px;
+}
+
+/* Sets the margin of the element with ID "main" to 20px */
+#main {
+  margin: 20px;
+}
+            </code></pre>
+        </li>
+        <li class="list-group-item">
+            <h2>Value</h2>
+            <p>A value is the specific setting for a CSS property. For example, the value for the color property could be "red", "blue", "green", or any other valid color value.</p>
+            <pre><code class="language-css">
+/* Sets the color of all <p> elements to red */
+p {
+  color: red;
+}
+
+/* Sets the font-size of all elements with class "example" to 16px */
+.example {
+  font-size: 16px;
+}
+
+/* Sets the margin of the element with ID "main" to 20px */
+#main {
+  margin: 20px;
+}
+            </code></pre>
+        </li>
+        <li class="list-group-item">
+            <h2>Declaration</h2>
+            <p>A declaration is a combination of a property and a value. Declarations are used to specify the styles for a particular selector.</p>
+            <pre><code class="language-css">
+/* Sets the color and font-size of all <p> elements */
+p {
+  color: red;
+  font-size: 16px;
+}
+
+/* Sets the margin and padding of the element with ID "main" */
+#main {
+  margin: 20px;
+  padding: 10px;
+}
+            </code></pre>
+        </li>
+        <li class="list-group-item">
+            <h2>Cascade</h2>
+            <p>The cascade is the process by which CSS determines which styles to apply to an element when there are conflicting styles. The cascade takes into account the specificity of the selectors, the order in which the styles are defined, and whether or not the styles are marked as !important.</p>
+            <pre><code class="language-css">
+/* This style will be applied to all <p> elements */
+p {
+  color: red;
+}
+
+/* This style will be applied to all elements with class "example" */
+.example {
+  color: blue;
+}
+
+/* This style will be applied to the element with ID "main" */
+#main {
+  color: green;
+}
+
+/* This style will be applied to the element with ID "main" because it is marked as !important */
+#main {
+  color: yellow !important;
+}
+            </code></pre>
+        </li>
+    </ul>
+  </div>
+  </div>
+  <div class="row">
+<div class="container">
+  <h1>Common CSS Attributes</h1>
+  <p>This list is not comprehensive but just serves as a example of some of the most commonly used attributes. For a more complete list check out the <a href="https://www.w3schools.com/cssref/index.php" target="_blank">W3 Schools Page for CSS Reference</a></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>color</td>
+        <td>Sets the color of text</td>
+        <td style="color: red;">This text is red</td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>Sets the size of text</td>
+        <td style="font-size: 24px;">This text is 24px</td>
+      </tr>
+      <tr>
+        <td>background-color</td>
+        <td>Sets the background color of an element</td>
+        <td style="background-color: yellow;">This has a yellow background</td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>Sets the border of an element</td>
+        <td style="border: 1px solid black;">This has a black border</td>
+      </tr>
+      <tr>
+        <td>padding</td>
+        <td>Sets the padding of an element. Padding is the area between the content and the border.</td>
+        <td style="padding: 10px;">This has 10px of padding</td>
+      </tr>
+      <tr>
+        <td>margin</td>
+        <td>Sets the margin of an element. Margin is the area outside the border.</td>
+        <td style="margin: 10px;">This has 10px of margin</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+</div>
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
