@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link href="../prism.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+
+<!-- SECTION Main Content -->
+
+<!-- SECTION String Methods Table-->
+<div class="container-fluid p-5 table-responsive">
+  
+ 
+    <div class="container-fluid p-3 table-responsive">
+      <h1 class="text-center pressStartFont">String Methods</h1>
+      <div class="row justify-content-center">
+        <div class="col-9">
+          <p class="text-center">
+            Strings are a primitive data type in JavaScript. They are used to represent text and are wrapped in single or double quotes. Strings are immutable, meaning they cannot be changed once they are created. However, you can use string methods to manipulate strings and return new values.
+          </p>
+          </div>
+          <div class="row">
+          <h2 class="text-center pressStartFont">Table of Contents</h2>
+          
+            <div class="col">
+              <ul class="list-group">
+            <li class="list-group-item"><a href="#charAt">charAt()</a></li>
+            <li class="list-group-item"><a href="#charCodeAt">charCodeAt()</a></li>
+            <li class="list-group-item"><a href="#concat">concat()</a></li>
+            <li class="list-group-item"><a href="#endsWith">endsWith()</a></li>
+            <li class="list-group-item"><a href="#includes">includes()</a></li>
+            <li class="list-group-item"><a href="#indexOf">indexOf()</a></li>
+            <li class="list-group-item"><a href="#lastIndexOf">lastIndexOf()</a></li>
+            </ul>
+          </div>
+            <div class="col">
+              <ul class="list-group">
+            <li class="list-group-item"><a href="#localeCompare">localeCompare()</a></li>
+            <li class="list-group-item"><a href="#match">match()</a></li>
+            <li class="list-group-item"><a href="#repeat">repeat()</a></li>
+            <li class="list-group-item"><a href="#replace">replace()</a></li>
+            <li class="list-group-item"><a href="#search">search()</a></li>
+            <li class="list-group-item"><a href="#slice">slice()</a></li>
+            <li class="list-group-item"><a href="#split">split()</a></li>
+            </ul>
+          </div>
+            <div class="col">
+              <ul class="list-group">
+            <li class="list-group-item"><a href="#startsWith">startsWith()</a></li>
+            <li class="list-group-item"><a href="#substr">substr()</a></li>
+            <li class="list-group-item"><a href="#substring">substring()</a></li>
+            <li class="list-group-item"><a href="#toLocaleLowerCase">toLocaleLowerCase()</a></li>
+            <li class="list-group-item"><a href="#toLocaleUpperCase">toLocaleUpperCase()</a></li>
+            <li class="list-group-item"><a href="#toLowerCase">toLowerCase()</a></li>
+            <li class="list-group-item"><a href="#toString">toString()</a></li>
+            </ul>
+          </div>
+            <div class="col">
+              <ul class="list-group">
+            <li class="list-group-item"><a href="#toUpperCase">toUpperCase()</a></li>
+            <li class="list-group-item"><a href="#trim">trim()</a></li>
+            <li class="list-group-item"><a href="#valueOf">valueOf()</a></li>
+              </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION String Methods -->
+   
+      <div class="row justify-content-center">
+        <div class="col">
+          <ul class="list-group">
+            <li class="list-group-item" id="charAt">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_charat.asp" target="_blank">charAt()</a></h5>
+              <p>Returns the character at the specified index in a string.</p>
+              <pre><code class="language-javascript">let str = "hello";
+          const char = str.charAt(1);
+          "e"</code></pre>
+            </li>
+            <li class="list-group-item" id="charCodeAt">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_charcodeat.asp" target="_blank">charCodeAt()</a></h5>
+              <p>Returns the Unicode value of the character at the specified index in a string.</p>
+              <pre><code class="language-javascript">let str = "hello";
+          const charCode = str.charCodeAt(1);
+          101</code></pre>
+            </li>
+            <li class="list-group-item" id="concat">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_concat_string.asp" target="_blank">concat()</a></h5>
+              <p>Joins two or more strings and returns a new string.</p>
+              <pre><code class="language-javascript">let str1 = "Hello";
+          let str2 = "World";
+          const newStr = str1.concat(" ", str2);
+          "Hello World"</code></pre>
+            </li>
+            <li class="list-group-item" id="endsWith">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_endswith.asp" target="_blank">endsWith()</a></h5>
+              <p>Checks whether a string ends with a specified string/characters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const endsWith = str.endsWith("World");
+          true</code></pre>
+            </li>
+            <li class="list-group-item" id="includes">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">includes()</a></h5>
+              <p>Checks whether a string contains the specified string/characters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const includes = str.includes("World");
+          true</code></pre>
+            </li>
+            <li class="list-group-item" id="indexOf">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">indexOf()</a></h5>
+              <p>Returns the position of the first occurrence of a specified value in a string.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const index = str.indexOf("World");
+          6</code></pre>
+            </li>
+            <li class="list-group-item" id="lastIndexOf">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">lastIndexOf()</a></h5>
+              <p>Returns the position of the last occurrence of a specified value in a string.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const lastIndex = str.lastIndexOf("l");
+          9</code></pre>
+            </li>
+            <li class="list-group-item" id="localeCompare">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_localecompare.asp" target="_blank">localeCompare()</a></h5>
+              <p>Compares two strings in the current locale.</p>
+              <pre><code class="language-javascript">let str1 = "Hello";
+          let str2 = "hello";
+          const compare = str1.localeCompare(str2);
+          -1</code></pre>
+            </li>
+            <li class="list-group-item" id="match">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_match.asp" target="_blank">match()</a></h5>
+              <p>Searches a string for a match against a regular expression, and returns the matches.</p>
+              <pre><code class="language-javascript">let str = "The rain in Spain falls mainly in the plain";
+          const regex = /ain/g;
+          const matches = str.match(regex);
+          ["ain", "ain", "ain"]</code></pre>
+            </li>
+            <li class="list-group-item" id="repeat">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_repeat.asp" target="_blank">repeat()</a></h5>
+              <p>Returns a new string with a specified number of copies of an existing string.</p>
+              <pre><code class="language-javascript">let str = "Hello";
+          const newStr = str.repeat(3);
+          "HelloHelloHello"</code></pre>
+            </li>
+            <li class="list-group-item" id="replace">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_replace.asp" target="_blank">replace()</a></h5>
+              <p>Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.replace("World", "Universe");
+          "Hello Universe"</code></pre>
+            </li>
+            <li class="list-group-item" id="search">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_search.asp" target="_blank">search()</a></h5>
+              <p>Searches a string for a specified value, or regular expression, and returns the position of the match.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const index = str.search("World");
+          6</code></pre>
+            </li>
+            <li class="list-group-item" id="slice">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_slice_string.asp" target="_blank">slice()</a></h5>
+              <p>Extracts a part of a string and returns a new string.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.slice(0, 5);
+          "Hello"</code></pre>
+            </li>
+            <li class="list-group-item" id="split">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">split()</a></h5>
+              <p>Splits a string into an array of substrings.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const arr = str.split(" ");
+          ["Hello", "World"]</code></pre>
+            </li>
+            <li class="list-group-item" id="startsWith">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_startswith.asp" target="_blank">startsWith()</a></h5>
+              <p>Checks whether a string starts with a specified string/characters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const startsWith = str.startsWith("Hello");
+          true</code></pre>
+            </li>
+            <li class="list-group-item" id="substr">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_substr.asp" target="_blank">substr()</a></h5>
+              <p>Extracts a part of a string, beginning at a specified start position, and returns a specified number of characters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.substr(6, 5);
+          "World"</code></pre>
+            </li>
+            <li class="list-group-item" id="substring">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_substring.asp" target="_blank">substring()</a></h5>
+              <p>Extracts the characters from a string, between two specified indices.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.substring(6, 11);
+          "World"</code></pre>
+            </li>
+            <li class="list-group-item" id="toLocaleLowerCase">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_tolocalelowercase.asp" target="_blank">toLocaleLowerCase()</a></h5>
+              <p>Converts a string to lowercase letters, according to the host's locale.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.toLocaleLowerCase();
+          "hello world"</code></pre>
+            </li>
+            <li class="list-group-item" id="toLocaleUpperCase">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_tolocaleuppercase.asp" target="_blank">toLocaleUpperCase()</a></h5>
+              <p>Converts a string to uppercase letters, according to the host's locale.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.toLocaleUpperCase();
+          "HELLO WORLD"</code></pre>
+            </li>
+            <li class="list-group-item" id="toLowerCase">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_tolowercase.asp" target="_blank">toLowerCase()</a></h5>
+              <p>Converts a string to lowercase letters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.toLowerCase();
+          "hello world"</code></pre>
+            </li>
+            <li class="list-group-item" id="toString">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_tostring_string.asp" target="_blank">toString()</a></h5>
+              <p>Returns the value of a string.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const value = str.toString();
+          "Hello World"</code></pre>
+            </li>
+            <li class="list-group-item" id="toUpperCase">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_touppercase.asp" target="_blank">toUpperCase()</a></h5>
+              <p>Converts a string to uppercase letters.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const newStr = str.toUpperCase();
+          "HELLO WORLD"</code></pre>
+            </li>
+            <li class="list-group-item" id="trim">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_trim.asp" target="_blank">trim()</a></h5>
+              <p>Removes whitespace from both ends of a string.</p>
+              <pre><code class="language-javascript">let str = "   Hello World   ";
+          const newStr = str.trim();
+          "Hello World"</code></pre>
+            </li>
+            <li class="list-group-item" id="valueOf">
+              <h5><a class="stringMethodLinks" href="https://www.w3schools.com/jsref/jsref_valueof_string.asp" target="_blank">valueOf()</a></h5>
+              <p>Returns the primitive value of a string.</p>
+              <pre><code class="language-javascript">let str = "Hello World";
+          const value = str.valueOf();
+          "Hello World"</code></pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    </div>
+           </ul>
+</div>
+</div>
+<!-- !SECTION end String Methods -->
+ 
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
