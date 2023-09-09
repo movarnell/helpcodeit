@@ -219,3 +219,7 @@ pre {
     margin: 0%;
     padding: 0% ;
 }
+
+.customBoxShadow {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.58);
+}
