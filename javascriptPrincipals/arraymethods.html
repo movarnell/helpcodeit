@@ -74,7 +74,7 @@ $(function(){
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#concat">concat()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#join">join()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#toString">toString()</a></li>
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#toLocaleString">toLocaleString()</a></li>
+          
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#entries">entries()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#keys">keys()</a></li>
           
@@ -215,6 +215,8 @@ $(function(){
     const index = array.indexOf(2);
     1</code></pre>
       </li>
+     
+     
     <li class="list-group-item">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof_array.asp" target="_blank">lastIndexOf()</a></h5>
           <p>Returns the last index of the specified element in the array.</p>
@@ -364,4 +366,6 @@ $(function(){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html>const arr = [1, 2, 3, 4, 2, 5, 1];
+const duplicates = [...new Set(arr.filter((item, index) => arr.indexOf(item) !== index))];
+console.log(duplicates); // [1, 2]
