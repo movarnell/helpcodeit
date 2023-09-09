@@ -9,6 +9,7 @@
     <link href="../../style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link href="../prism.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -29,223 +30,326 @@ $(function(){
 <!-- SECTION Array Methods Table-->
 <div class="container-fluid p-5 table-responsive">
   <h1 class="text-center pressStartFont">Array Methods</h1>
+  <div class="row justify-content-center">
+    <div class="col-8"><p class="text-center">Array methods are built-in JavaScript methods that allow us to perform actions on arrays. These methods are extremely useful and can help us write more efficient code.</p>
+      <p class="text-center">Below is a list of useful array functions with examples of how they work. Use the table of contents to go to the example, then at the example you can click on the method name and go to the W3 Schools page for that array method, with interactive examples.</p>
+      <div class="text-center">
+    <a href="https://miro.medium.com/v2/resize:fit:1400/1*U1kFNbJBhpLakBk2urn7nw.png" target="_blank" class="btn btn-outline-info m-4" rel="noopener noreferrer">Useful Infographic Showing Methods in Action</a>
+  </div> 
+    </div>
+  </div>
+   
+    <div class="row ms-5 me-5 mb-5">
+      <div class="col col-sm-3">
+        <ul class="list-group list-group small">
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#filter">filter()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#reduce">reduce()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#reduceRight">reduceRight()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#every">every()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#some">some()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#includes">includes()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#indexOf">indexOf()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#lastIndexOf">lastIndexOf()</a></li>
+          
+        </ul>
+      </div>
+      <div class="col col-sm-3">
+        <ul class="list-group list-group small">
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#find">find()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#findIndex">findIndex()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#sort">sort()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#reverse">reverse()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#fill">fill()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#copyWithin">copyWithin()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#flat">flat()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#flatMap">flatMap()</a></li>
+          
+          
+        </ul>
+      </div>
+      <div class="col col-sm-3">
+        <ul class="list-group list-group small">
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#slice">slice()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#splice">splice()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#concat">concat()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#join">join()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#toString">toString()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#toLocaleString">toLocaleString()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#entries">entries()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#keys">keys()</a></li>
+          
+          
+         
+        </ul>
+      </div>
+      <div class="col col-sm-3">
+        <ul class="list-group list-group small">
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#values">values()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#from">from()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#isArray">isArray()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#of">of()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#push">push()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#pop">pop()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#shift">shift()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#unshift">unshift()</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="row">
   <div class="roundTable">
-<table class="table table-dark table-striped table-bordered tableStyleCustomizations ">
-  <thead>
-    <tr class="text-center fs-4">
-      <th>Method Name</th>
-      <th>Return Value</th>
-      <th>Explanation</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr >
-      <td>push()</td>
-      <td>The modified array</td>
-      <td>Appends one or more elements to the end of the array.</td>
-      <td>let array = [];<br/>
-         array.push("hello", "world");<br/>
-         <span style="color: yellowgreen">["hello", "world"]</span> </td>
-    </tr>
-    <tr>
-      <td>pop()</td>
-      <td>The removed element</td>
-      <td>Removes the last element from the array and returns it.</td>
-      <td>let array = [ 1, 2, 3]<br/>
-        const lastElement = arr.pop();<br/>
-        <span style="color: yellowgreen">[3]</span></td>
-    </tr>
-    <tr>
-      <td>shift()</td>
-      <td>The removed element</td>
-      <td>Removes the first element from the array and returns it.</td>
-      <td>let array = [1,2,3];<br/>
-        const firstElement = array.shift();<br/>
-        <span style="color: yellowgreen">[1]</span></td>
-    </tr>
-    <tr>
-      <td>unshift()</td>
-      <td>The modified array</td>
-      <td>Prepends one or more elements to the beginning of the array.</td>
-      <td>let array =[1,2,3];<br/>
-        array.unshift("hello", "world");<br/>
-        <span style="color: yellowgreen">["hello", "world", 1, 2, 3]</td>
-    </tr>
-    <tr>
-      <td>splice()</td>
-      <td>A new array with the removed elements</td>
-      <td>Removes elements from the array and optionally inserts new elements at the specified indexes.</td>
-      <td>let array = ["hello", "world", "welcome", "home"]<br/>
-        const newArray = array.splice(1, 2, "hello", "world");<br/>
-        <span style="color: yellowgreen">["world", "welcome"]</span></td>
-    </tr>
-    <tr>
-      <td>slice()</td>
-      <td>A new array with the specified elements</td>
-      <td>Copies a section of the array and returns it.</td>
-      <td>let array = ["hello", "world", "welcome", "home"]<br/>
-        const newArray = array.slice(1, 3);<br/>
-        <span style="color: yellowgreen">["world", "welcome"]</span></td>
-    </tr>
-    <tr>
-      <td>concat()</td>
-      <td>A new array with the concatenated arrays</td>
-      <td>Concatenates two or more arrays and returns a new array.</td>
-      <td>let array = ["hello", "world", "welcome", "home"]<br/>
-        const newArray = array.concat(["hello", "world"]);<br/>
-        <span style="color: yellowgreen">["hello", "world", "welcome", "home", "hello", "world"]</span></td>
-    </tr>
-    <tr>
-      <td>join()</td>
-      <td>A string with the elements of the array</td>
-      <td>Joins the elements of the array into a string.</td>
-      <td>let array = ["hello", "world", "welcome", "home"]<br/>
-        const newString = array.join(" ");<br/>
-        <span style="color: yellowgreen">"hello world welcome home"</span></td>
-    </tr>
-    <tr>
-      <td>map()</td>
-      <td>A new array with the results of the function</td>
-      <td>Applies a function to each element of the array and returns a new array with the results.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const newArray = array.map(element => element * 2);<br/>
-        <span style="color: yellowgreen">[2, 4, 6, 8, 10]</span></td>  
-      </td>
-    </tr>
-    <tr>
-      <td>filter()</td>
-      <td>A new array with the elements that pass the test</td>
-      <td>Creates a new array with the elements of the original array that pass a test.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const newArray = array.filter(element => element % 2 === 0);<br/>
-        <span style="color: yellowgreen">[2, 4]</span></td>
-    </tr>
-    <tr>
-      <td>reduce()</td>
-      <td>The accumulated value</td>
-      <td>Reduces the array to a single value by applying a function to each element and accumulating the results.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const sum = array.reduce((accumulator, element) => accumulator + element, 0);<br/>
-        <span style="color: yellowgreen">15</span></td>
-    </tr>
-    <tr>
-      <td>reduceRight()</td>
-      <td>The accumulated value</td>
-      <td>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const sum = array.reduceRight((accumulator, element) => accumulator + element, 0);<br/>
-        <span style="color: yellowgreen">15</span></td>
-    </tr>
-    <tr>
-      <td>every()</td>
-      <td>True or false</td>
-      <td>Tests whether all elements in the array pass the test implemented by the provided function.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const allEven = array.every(element => element % 2 === 0);<br/>
-        <span style="color: yellowgreen">false</span></td>
 
-      </td>
-    </tr>
-    <tr>
-      <td>some()</td>
-      <td>True or false</td>
-      <td>Tests whether some element in the array passes the test implemented by the provided function.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const someEven = array.some(element => element % 2 === 0);<br/>
-        <span style="color: yellowgreen">true</span></td>
-    </tr>
-    <tr>
-      <td>includes()</td>
-      <td>True or false</td>
-      <td>Tests whether the array contains the specified element.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const hasTwo = array.includes(2);<br/>
-        <span style="color: yellowgreen">true</span></td>
-    </tr>
-    <tr>
-      <td>indexOf()</td>
-      <td>The index of the element</td>
-      <td>Returns the first index of the specified element in the array.</td>
-      <td>let array = [1, 2, 3, 4, 5]<br/>
-        const index = array.indexOf(2);<br/>
-        <span style="color: yellowgreen">1</span>
-      </td>
-    </tr>
-    <tr>
-      <td>lastIndexOf()</td>
-      <td>The index of the element</td>
-      <td>Returns the last index of the specified element in the array.</td>
-      <td>let array = [1, 2, 3, 4, 5]<br/>
-        const index = array.lastIndexOf(2);<br/>
-        <span style="color: yellowgreen">1</span>
-    </tr>
-    <tr>
-      <td>find()</td>
-      <td>The value of the element</td>
-      <td>Returns the value of the first element in the array that satisfies the provided testing function.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const element = array.find(element => element % 2 === 0);<br/>
-        <span style="color: yellowgreen">2</span></td>
-    </tr>
-    <tr>
-      <td>findIndex()</td>
-      <td>The index of the element</td>
-      <td>Returns the index of the first element in the array that satisfies the provided testing function.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        const index = array.findIndex(element => element % 2 === 0);<br/>
-        <span style="color: yellowgreen">1</span></td>
-    </tr>
-    <tr>
-      <td>sort()</td>
-      <td>The modified array</td>
-      <td>Sorts the elements of the array in place.</td>
-      <td>let array = ["e", "r" , "d", "v", "a"];<br/>
-        array.sort();<br/>
-        <span style="color: yellowgreen">["a", "d", "e", "r", "v"]</span></td>
-    </tr>
-    <tr>
-      <td>reverse()</td>
-      <td>The modified array</td>
-      <td>Reverses the order of the elements of the array in place.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        array.reverse();<br/>
-        <span style="color: yellowgreen">[5, 4, 3, 2, 1]</span></td>
-    </tr>
-    <tr>
-      <td>fill()</td>
-      <td>The modified array</td>
-      <td>Fills all the elements of the array from a start index to an end index with a static value.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        array.fill(0, 1, 3);<br/>
-        <span style="color: yellowgreen">[1, 0, 0, 4, 5]</span></td>
-    </tr>
-    <tr>
-      <td>copyWithin()</td>
-      <td>The modified array</td>
-      <td>Copies a sequence of array elements within the array.</td>
-      <td>let array = [1, 2, 3, 4, 5];<br/>
-        array.copyWithin(0, 3);<br/>
-        <span style="color: yellowgreen">[4, 5, 3, 4, 5]</span></td>
-    </tr>
-    <tr>
-      <td>flat()</td>
-      <td>A new array with the sub-array elements concatenated</td>
-      <td>Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</td>
-      <td>const arr = [1, 2, [3, 4]];<br/>
-        arr.flat();<br/>
-        <span style="color: yellowgreen">[1, 2, 3, 4]</span></td>
-    </tr>
-    <tr>
-      <td>flatMap()</td>
-      <td>A new array with the sub-array elements concatenated</td>
-      <td>Maps each element using a mapping function, then flattens the result into a new array.</td>
-      <td>const arr = [1, 2, 3, 4];<br/>
-        arr.flatMap(x => [x * 2]);<br/>
-        <span style="color: yellowgreen">[2, 4, 6, 8]</span></td>
-    </tr>
-  </tbody>
-</table>
+<ul class="list-group">
+      <li class="list-group-item" id="filter">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_filter.asp" target="_blank">filter()</a></h5>
+        <p>Creates a new array with the elements of the original array that pass a test.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const newArray = array.filter(element => element % 2 === 0);
+    [2, 4]</code></pre>
+      </li>
+        <li class="list-group-item" id="reduce">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reduce.asp" target="_blank">reduce()</a></h5>
+          <p>Reduces the array to a single value by applying a function to each element and accumulating the results.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const sum = array.reduce((accumulator, element) => accumulator + element, 0);
+      15</code></pre>
+        </li>
+        <li class="list-group-item" id="reduceRight">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reduceright.asp" target="_blank">reduceRight()</a></h5>
+          <p>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</p>
+            <pre><code class="language-javascript">let array = [10, 20, 30, 40, 50];
+          const sum = array.reduceRight((accumulator, element) => accumulator + element, 5);
+          155</code></pre>
+        </li>
+        <li class="list-group-item" id="every">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_every.asp" target="_blank">every()</a></h5>
+          <p>Tests whether all elements in the array pass the test implemented by the provided function.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const allEven = array.every(element => element % 2 === 0);
+      false</code></pre>
+        </li>
+        <li class="list-group-item" id="some">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_some.asp" target="_blank">some()</a></h5>
+          <p>Tests whether some element in the array passes the test implemented by the provided function.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const someEven = array.some(element => element % 2 === 0);
+      true</code></pre>
+        </li>
+        <li class="list-group-item" id="includes">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">includes()</a></h5>
+          <p>Tests whether the array contains the specified element.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const hasTwo = array.includes(2);
+      true</code></pre>
+        </li>
+        <li class="list-group-item" id="indexOf">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">indexOf()</a></h5>
+          <p>Returns the first index of the specified element in the array.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const index = array.indexOf(2);
+      1</code></pre>
+        </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">lastIndexOf()</a></h5>
+        <p>Returns the last index of the specified element in the array.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const index = array.lastIndexOf(2);
+    1</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_find.asp" target="_blank">find()</a></h5>
+        <p>Returns the value of the first element in the array that satisfies the provided testing function.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const element = array.find(element => element % 2 === 0);
+    2</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank">findIndex()</a></h5>
+        <p>Returns the index of the first element in the array that satisfies the provided testing function.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const index = array.findIndex(element => element % 2 === 0);
+    </code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_sort.asp" target="_blank">sort()</a></h5>
+        <p>Sorts the elements of the array in place.</p>
+        <pre><code class="language-javascript">let array = ["e", "r" , "d", "v", "a"];</code></pre>
+    <li class="list-group-item">
+      <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reduce.asp" target="_blank">reduce()</a></h5>
+      <p>Reduces the array to a single value by applying a function to each element and accumulating the results.</p>
+      <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+  const sum = array.reduce((accumulator, element) => accumulator + element, 0);
+  15</code></pre>
+    </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_array_reduce.asp" target="_blank">reduceRight()</a></h5>
+        <p>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</p>
+          <pre><code class="language-javascript">let array = [10, 20, 30, 40, 50];
+        const sum = array.reduceRight((accumulator, element) => accumulator + element, 5);
+        155</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_every.asp" target="_blank">every()</a></h5>
+        <p>Tests whether all elements in the array pass the test implemented by the provided function.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const allEven = array.every(element => element % 2 === 0);
+    false</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_some.asp" target="_blank">some()</a></h5>
+        <p>Tests whether some element in the array passes the test implemented by the provided function.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const someEven = array.some(element => element % 2 === 0);
+    true</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">includes()</a></h5>
+        <p>Tests whether the array contains the specified element.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const hasTwo = array.includes(2);
+    true</code></pre>
+      </li>
+      <li class="list-group-item">
+        <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">indexOf()</a></h5>
+        <p>Returns the first index of the specified element in the array.</p>
+        <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+    const index = array.indexOf(2);
+    1</code></pre>
+      </li>
+    <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof_array.asp" target="_blank">lastIndexOf()</a></h5>
+          <p>Returns the last index of the specified element in the array.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const index = array.lastIndexOf(2);
+      1</code></pre>
+        </li>
+        <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_find.asp" target="_blank">find()</a></h5>
+          <p>Returns the value of the first element in the array that satisfies the provided testing function.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const element = array.find(element => element % 2 === 0);
+      2</code></pre>
+        </li>
+        <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank">findIndex()</a></h5>
+          <p>Returns the index of the first element in the array that satisfies the provided testing function.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      const index = array.findIndex(element => element % 2 === 0);
+      1</code></pre>
+        </li>
+        <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_sort.asp" target="_blank">sort()</a></h5>
+          <p>Sorts the elements of the array in place.</p>
+          <pre><code class="language-javascript">let array = ["e", "r" , "d", "v", "a"];
+      array.sort();
+      ["a", "d", "e", "r", "v"]</code></pre>
+        </li>
+        <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reverse.asp" target="_blank">reverse()</a></h5>
+          <p>Reverses the order of the elements of the array in place.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      array.reverse();
+      [5, 4, 3, 2, 1]</code></pre>
+        </li>
+        <li class="list-group-item">
+          <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_fill.asp" target="_blank">fill()</a></h5>
+          <p>Fills all the elements of the array from a start index to an end index with a static value.</p>
+          <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+      array.fill(0, 1, 3);
+      [1, 0, 0, 4, 5]</code></pre>
+        <ul class="list-group">
+                <li id="copyWithin" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_copywithin.asp" target="_blank">copyWithin()</a></h5>
+                  <p>Copies a sequence of array elements within the array.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.copyWithin(0, 3);
+              [4, 5, 3, 4, 5]</code></pre>
+                </li>
+                <li id="flat" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_flat.asp" target="_blank">flat()</a></h5>
+                  <p>Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</p>
+                  <pre><code class="language-javascript">const arr = [1, 2, [3, 4]];
+              arr.flat();
+              [1, 2, 3, 4]</code></pre>
+                </li>
+                <li id="flatMap" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_flatmap.asp" target="_blank">flatMap()</a></h5>
+                  <p>Maps each element using a mapping function, then flattens the result into a new array.</p>
+                  <pre><code class="language-javascript">const arr = [1, 2, 3, 4];
+              arr.flatMap(x => [x * 2]);
+              [2, 4, 6, 8]</code></pre>
+                </li>
+                <li id="slice" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_slice_array.asp" target="_blank">slice()</a></h5>
+                  <p>Returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              const newArray = array.slice(1, 3);
+              [2, 3]</code></pre>
+                </li>
+                <li id="splice" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_splice.asp" target="_blank">splice()</a></h5>
+                  <p>Changes the contents of an array by removing or replacing existing elements and/or adding new elements.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.splice(2, 1, "a", "b");
+              [3]</code></pre>
+                </li>
+                <li id="concat" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_concat_array.asp" target="_blank">concat()</a></h5>
+                  <p>Merges two or more arrays into a new array.</p>
+                  <pre><code class="language-javascript">let array1 = [1, 2, 3];
+              let array2 = [4, 5, 6];
+              let newArray = array1.concat(array2);
+              [1, 2, 3, 4, 5, 6]</code></pre>
+                </li>
+                <li id="join" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_join.asp" target="_blank">join()</a></h5>
+                  <p>Joins all elements of an array into a string.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              const string = array.join("-");
+              "1-2-3-4-5"</code></pre>
+                </li>
+                <li id="toString" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_tostring_array.asp" target="_blank">toString()</a></h5>
+                  <p>Returns a string representing the specified array and its elements.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              const string = array.toString();
+              "1,2,3,4,5"</code></pre>
+                </li>
+                <li id="length" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_length_array.asp" target="_blank">length</a></h5>
+                  <p>Reflects the number of elements in an array.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.length;
+              5</code></pre>
+                </li>
+                <li id="pop" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_pop.asp" target="_blank">pop()</a></h5>
+                  <p>Removes the last element from an array and returns that element.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.pop();
+              [1, 2, 3, 4]</code></pre>
+                </li>
+                <li id="push" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_push.asp" target="_blank">push()</a></h5>
+                  <p>Adds one or more elements to the end of an array and returns the new length of the array.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.push(6);
+              [1, 2, 3, 4, 5, 6]</code></pre>
+                </li>
+                <li id="shift" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_shift.asp" target="_blank">shift()</a></h5>
+                  <p>Removes the first element from an array and returns that element.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.shift();
+              [2, 3, 4, 5]</code></pre>
+                </li>
+                <li id="unshift" class="list-group-item">
+                  <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_unshift.asp" target="_blank">unshift()</a></h5>
+                  <p>Adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+                  <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
+              array.unshift(0);
+              [0, 1, 2, 3, 4, 5]</code></pre>
+                </li>
+           </ul>
 </div>
 </div>
 <!-- !SECTION end Array Methods -->
@@ -255,6 +359,7 @@ $(function(){
 
 
 <!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 

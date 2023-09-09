@@ -198,3 +198,26 @@ pre {
     font-size: 1.1rem;
     
 }
+
+.arrayMethodLinks {
+    font-size: 1.4rem;
+    text-align: start;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+.arrayMethodLinks:hover {
+    text-decoration: underline;
+}
+
+.arrayMethodLinks:visited {
+    font-weight: 400;
+}
+
+.arrayMethodTableofContents {
+    font-size: .75rem;
+    text-align: start;
+    text-decoration: solid;
+    margin: 0%;
+    padding: 0% ;
+}
