@@ -36,6 +36,17 @@ td {
     position: relative;
     z-index: -1;
 }
+.terminologyHeroBackground {
+    background-image: url("images/waldemar-U3Ptj3jafX8-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 300px;
+    min-height: 50px;
+    width: 100vw;
+    position: relative;
+    z-index: -1;
+}
 
 .ptLogo{
     border-radius: 20px;
@@ -228,7 +239,7 @@ pre {
 }
 
 .jsTitleMain {
-    font-size: 6rem;
+    font-size: 4em;
     
 }
 
@@ -236,7 +247,7 @@ pre {
     font-size: 1.5em;
     text-decoration:none;
     font-weight: bold;
-    
+
 }
 
 .objectPageLeadText {
