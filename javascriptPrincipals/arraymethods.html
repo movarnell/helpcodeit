@@ -76,10 +76,9 @@ $(function(){
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#concat">concat()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#join">join()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#toString">toString()</a></li>
-          
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#entries">entries()</a></li>
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#keys">keys()</a></li>
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#values">values()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#from">from()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#isArray">isArray()</a></li>
+          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#of">of()</a></li>
           
           
          
@@ -88,9 +87,7 @@ $(function(){
       <div class="col col-sm-3">
         <ul class="list-group list-group">
          
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#from">from()</a></li>
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#isArray">isArray()</a></li>
-          <li class="list-group-item"><a class="arrayMethodTableofContents" href="#of">of()</a></li>
+          
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#push">push()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#pop">pop()</a></li>
           <li class="list-group-item"><a class="arrayMethodTableofContents" href="#shift">shift()</a></li>
@@ -151,67 +148,67 @@ $(function(){
       const index = array.indexOf(2);
       1</code></pre>
         </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="lastIndexOf">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">lastIndexOf()</a></h5>
         <p>Returns the last index of the specified element in the array.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const index = array.lastIndexOf(2);
     1</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="find">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_find.asp" target="_blank">find()</a></h5>
         <p>Returns the value of the first element in the array that satisfies the provided testing function.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const element = array.find(element => element % 2 === 0);
     2</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="findIndex">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank">findIndex()</a></h5>
         <p>Returns the index of the first element in the array that satisfies the provided testing function.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const index = array.findIndex(element => element % 2 === 0);
     </code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="sort">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_sort.asp" target="_blank">sort()</a></h5>
         <p>Sorts the elements of the array in place.</p>
         <pre><code class="language-javascript">let array = ["e", "r" , "d", "v", "a"];</code></pre>
-    <li class="list-group-item">
+    <li class="list-group-item" id="reverse">
       <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reduce.asp" target="_blank">reduce()</a></h5>
       <p>Reduces the array to a single value by applying a function to each element and accumulating the results.</p>
       <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
   const sum = array.reduce((accumulator, element) => accumulator + element, 0);
   15</code></pre>
     </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="reduceRight">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_array_reduce.asp" target="_blank">reduceRight()</a></h5>
         <p>Reduces the array to a single value by applying a function to each element in reverse order and accumulating the results.</p>
           <pre><code class="language-javascript">let array = [10, 20, 30, 40, 50];
         const sum = array.reduceRight((accumulator, element) => accumulator + element, 5);
         155</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="every">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_every.asp" target="_blank">every()</a></h5>
         <p>Tests whether all elements in the array pass the test implemented by the provided function.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const allEven = array.every(element => element % 2 === 0);
     false</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="some">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_some.asp" target="_blank">some()</a></h5>
         <p>Tests whether some element in the array passes the test implemented by the provided function.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const someEven = array.some(element => element % 2 === 0);
     true</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="includes">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">includes()</a></h5>
         <p>Tests whether the array contains the specified element.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
     const hasTwo = array.includes(2);
     true</code></pre>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" id="indexOf">
         <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">indexOf()</a></h5>
         <p>Returns the first index of the specified element in the array.</p>
         <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
@@ -220,42 +217,42 @@ $(function(){
       </li>
      
      
-    <li class="list-group-item">
+    <li class="list-group-item" id="lastIndexOf">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_lastindexof_array.asp" target="_blank">lastIndexOf()</a></h5>
           <p>Returns the last index of the specified element in the array.</p>
           <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
       const index = array.lastIndexOf(2);
       1</code></pre>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item" id="find">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_find.asp" target="_blank">find()</a></h5>
           <p>Returns the value of the first element in the array that satisfies the provided testing function.</p>
           <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
       const element = array.find(element => element % 2 === 0);
       2</code></pre>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item" id="findIndex">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_findindex.asp" target="_blank">findIndex()</a></h5>
           <p>Returns the index of the first element in the array that satisfies the provided testing function.</p>
           <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
       const index = array.findIndex(element => element % 2 === 0);
       1</code></pre>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item" id="sort">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_sort.asp" target="_blank">sort()</a></h5>
           <p>Sorts the elements of the array in place.</p>
           <pre><code class="language-javascript">let array = ["e", "r" , "d", "v", "a"];
       array.sort();
       ["a", "d", "e", "r", "v"]</code></pre>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item" id="reverse">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_reverse.asp" target="_blank">reverse()</a></h5>
           <p>Reverses the order of the elements of the array in place.</p>
           <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
       array.reverse();
       [5, 4, 3, 2, 1]</code></pre>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item" id="fill">
           <h5><a class="arrayMethodLinks" href="https://www.w3schools.com/jsref/jsref_fill.asp" target="_blank">fill()</a></h5>
           <p>Fills all the elements of the array from a start index to an end index with a static value.</p>
           <pre><code class="language-javascript">let array = [1, 2, 3, 4, 5];
