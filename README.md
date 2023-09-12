@@ -1,7 +1,7 @@
 
 # helpcodeit
 
-This is an open-source website designed to assist beginning coders, especially those associated with Promineo Tech, in grasping core concepts of front-end development. The project welcomes contributions from everyone. There is no grade assigned, and any participation is strictly for experience and learning. Once your pull request is merged successfully, please add your name to the list of contributors.
+This is an open-source website designed to assist beginning coders in grasping core concepts of front-end development. The project welcomes contributions from everyone.  Once your pull request is merged successfully, please add your name to the list of contributors.
 
 ## Project Structure
 
