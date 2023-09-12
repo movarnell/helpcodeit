@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container">
+<div class="row">
+    <div class="text-center">
+    <img src="../images/github-icon.svg" alt="GitHub Logo" class="gitignoreLogoSize text-center pt-5 pb-sm-4" >
+</div>
+    <h1 class="text-center display-5">Using .gitignore to Prevent Files from Uploading to <img src="../images/github.svg" alt="GitHub" class="gitLogo pb-1" height="40px"></h1>
+    <p class="lead pt-5">This tutorial will show you how to use .gitignore to prevent files from uploading to GitHub.</p>
+    <p class="lead">This is useful for files that contain sensitive information, such as API keys, passwords, node_modules, and other information that you don't want to be public.</p>
+    <p class="lead">This tutorial assumes that you have already created a repository on GitHub and have cloned it to your local machine.</p>
+    <p class="lead">If you have not done this, please see the <a href="githubbasics.html" >GitHub Basics</a> tutorial.</p>
+    <p class="lead">If you have not installed Git on your local machine, please see the <a href="githubmain.html" >GitHub</a> tutorial.</p>
+    <p class="lead">After making sure everything is installed, and if your up to this point in the course then it should have already been installed, you can continue with this tutorial.</p>
+    <p class="lead">First, you will need to create a .gitignore file in the root directory of your project.</p>
+    <p class="lead">This can be done by using the command <code class="fs-6">touch .gitignore</code> in the terminal, or by clicking the "Add File" button in vscode and typing ".gitignore" in the text box.</p>
+    <p class="lead">Next, you will need to open the .gitignore file and add the files that you want to ignore.</p>
+    <p class="lead">For example, if you want to ignore the node_modules folder, you would type <pre><code class="language-shell">node_modules/</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a file, you would type <pre><code class="language-shell">filename.extension</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a folder, you would type <pre><code class="language-shell">foldername/</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a file type, you would type <pre><code class="language-shell">*.extension</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a file type in a folder, you would type <pre><code class="language-shell">foldername/*.extension</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a file type in a folder and all subfolders, you would type <pre><code class="language-shell">foldername/**/*.extension</code></pre> in the .gitignore file.</p>
+    <p class="fw-bold">If you want to ignore a file type in a folder and all subfolders, you would type <pre><code class="language-shell">foldername/**/*.extension</code></pre> in the .gitignore file.</p>
+</div>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
