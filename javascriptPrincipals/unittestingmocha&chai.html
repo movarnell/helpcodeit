@@ -70,26 +70,26 @@ $(function(){
       <source src="../video/m&cunittesting.mp4" type="video/mp4">
   </div>
   <div class="row">
-    <div class="mt-5 pt-1 border border-1 border-dark rounded-4 customBoxShadow text-center mb-5 p-3">
+    <div class="mt-5 pt-1 border border-1 border-dark rounded-4 customBoxShadow mb-5 p-3">
     <h2 class="text-center">How to Install Mocha & Chai</h2>
     <p class="text-center">To install Mocha & Chai you will need to have Node.js installed on your computer. If you do not have Node.js installed you can download it <a href="https://nodejs.org/en/download/" target="_blank">here</a>. Once you have Node.js installed you can install Mocha & Chai by opening your terminal and typing the following command.</p>
-   <h3>First Run this to make the Package.json file</h3>
+   <h3 class="pt-4">First Run this to make the Package.json file</h3>
     <pre><code class="lang-shell">
     npm init -y
     </code></pre>
-    <h3>Then Run this to install Mocha & Chai</h3>
+    <h3 class="pt-4">Then Run this to install Mocha & Chai</h3>
     <pre><code class="lang-shell">
     npm i mocha chai
     </code></pre>
   
-  <h4 class="text-center">This goes inside the Head tags of your HTML testing page. </h4>
+  <h3 class="pt-4">This goes inside the Head tags of your HTML testing page. </h3>
   <pre><code class="lang-html">
    
     &lt;link rel="stylesheet" href="node_modules/mocha/mocha.css"/>
     
     </code></pre>
 
-  <h4 class="text-center">Body of the HTML for the testing HTML File</h4>
+  <h3 class="pt-4">Body of the HTML for the testing HTML File</h3>
   <pre><code class="lang-html">
    
     &lt;div id="mocha">
@@ -101,9 +101,9 @@ $(function(){
     &lt;div id="fixtures">&lt;/div>
     &lt;script src="node_modules/mocha/mocha.js">&lt;/script>
     &lt;script src="node_modules/chai/chai.js">&lt;/script>
-    &lt;script src="index.js">&lt;/script>
+    &lt;script src="index.js">&lt;/script> &lt;!-- YOUR FILENAME FOR YOUR MAIN PROJECT FILE in the src= -->
     &lt;script>mocha.setup('bdd')&lt;/script>
-    &lt;script src="index.test.js">&lt;/script>
+    &lt;script src="index.test.js">&lt;/script> &lt;!-- YOUR FILENAME FOR YOUR TESTING FILE in the src= -->
     &lt;script>mocha.run();&lt;/script>
     
     </code></pre>
