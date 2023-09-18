@@ -262,3 +262,8 @@ pre {
     max-height: 300px;
    
 }
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
