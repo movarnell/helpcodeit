@@ -267,3 +267,9 @@ pre {
   aspect-ratio: 16 / 9;
   width: 100%;
 }
+
+.morpheus {
+    width: 300px;
+    height: auto;
+    border-radius: 40px;
+}
