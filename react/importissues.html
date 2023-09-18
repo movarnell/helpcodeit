@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z490EPWZW9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container mb-5 p-4">
+    <div class="row">
+        <h1 class="text-center display-2">Import Issues in React <img src="https://cdn.svgporn.com/logos/react.svg" width="100px" height="100px" alt="React Logo" ></h1>
+        <p class="lead">One of the most common issues in React development is importing components. This page will cover some of the most common issues with importing components in React.</p>
+        <p>React is a JavaScript library for building user interfaces. It is common in React development to need to import components that are reused. Below is an example of an import.</p>
+
+        <pre><code class="language-javascript">import React from 'react';</code></pre>
+        <p>Imports are used to bring in components from other files. The
+            <code>import</code> keyword is used to import a component. The
+            <code>from</code> keyword is used to specify the file that the component is in. The file extension is not required. If the file extension is not specified, then the file extension will be assumed to be
+            <code>.js</code>. If the file extension is specified, then the file extension will be used. The file extension is not required, but it is recommended to use it.</p>
+       <p>One of the more common issues with imports is forgetting to make your component exportable. If you do not export your component, then you will not be able to import it. Below is an example of a component that is not exportable.</p>
+<pre><code class="language-javascript">function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}</code></pre>
+<p>Notice that the component is not exportable. This means that it cannot be imported. To make the component exportable, you need to add the
+    <code>export</code> keyword before the function. Below is an example of a component that is exportable.</p>
+<pre><code class="language-javascript">export function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}</code></pre>
+<p>Notice that the component is now exportable. This means that it can be imported. To import the component, you need to use the
+    <code>import</code> keyword. Below is an example of importing the component.</p>
+<pre><code class="language-javascript">import { Welcome } from './Welcome';</code></pre>
+<p>Now we will often use the <code>default</code> keyword when importing components. This is because we often want to import the default component. The default component is the component that is exported by default. The default component is the component that is exported if no other component is exported. Below is an example of a component that is exported by default.</p>
+<pre><code class="language-javascript">export default function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}</code></pre>
+<p>Notice that the component is now exported by default. This means that it can be imported. To import the component, you will do the same as we did when it was not the default component. </p>
+<h3 class="text-center">Importing a Component from a Specific Location</h3>
+<p>When you import a component, you can specify the location of the component. This is useful when you want to import a component from a specific location. Below is an example of importing a component from a specific location.</p>
+<pre><code class="language-javascript">import { Welcome } from './components/Welcome';</code></pre>
+<p>When we are importing a component from the components folder we use "./components/Welcome". This means that we are importing the Welcome component from the components folder. If the component is in a folder outside of the components folder, then we would use "../components/Welcome". This means that we are importing the Welcome component from the components folder. If the component is in a folder outside of the components folder, then we would use "../components/Welcome". </p>
+<h3 class="text-center">How to See What The Relative Path Is?</h3>
+<p>If you can't quite figure out where the file is located you can right click on the file in vs code and click "Copy Relative Path". This will copy the relative path to the file. You can then paste the relative path into the import statement.</p>
+<p>There is one thing you will need to do after this solution, you will need to make sure you take the unneeded parts of the path out, so if the relative path copies in as <strong>"user/username/documents/projectname/src/components/Welcome.js"</strong> you will need to remove the <strong>"user/username/documents/projectname/src/"</strong> part of the path.
+and just leave the <strong> "./components/Welcome.js"</strong> part of the path.</p> 
+<p>Often times if you're having issues with this if you work with the basic steps of trying different ways of using the "../" and "./" before you can figure out what is holding it back. Make sure to read any error messages closely</p>
+
+
+    </div>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
