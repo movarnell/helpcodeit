@@ -273,3 +273,8 @@ pre {
     height: auto;
     border-radius: 40px;
 }
+
+.graphicsMethods {
+    text-align: center;
+    font-size: 3rem ;
+}
