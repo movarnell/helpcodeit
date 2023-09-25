@@ -278,3 +278,9 @@ pre {
     text-align: center;
     font-size: 3rem ;
 }
+
+.fixed-jquery-logo {
+    width: 300px;
+    height: auto;
+    
+}
