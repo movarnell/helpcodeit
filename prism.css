@@ -4,7 +4,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #fff;
   background: 0 0;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Cascadia Code", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
   text-align: left;
   text-shadow: 0 -0.1em 0.2em #000;
@@ -30,7 +30,7 @@ pre[class*="language-"] {
   border: .5px solid #fc0000;
   box-shadow: 3px 3px 0.5em #000 ;
   margin: 0.5em 0;
-  overflow: auto;
+
   padding: 1em;
 }
 pre[class*="language-"]::-moz-selection {
@@ -56,7 +56,7 @@ pre[class*="language-"]::selection {
 :not(pre) > code[class*="language-"] {
   border-radius: 0.3em;
   border: 0.13em solid #545454;
-  box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+  box-shadow: 1px 1px .03em -0.1em #000 inset;
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
 }
@@ -64,7 +64,8 @@ pre[class*="language-"]::selection {
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: #777;
+  /* THIS IS THE COMMENT COLOR */
+  color: #ff9100;
 }
 .token.punctuation {
   opacity: 0.7;
@@ -205,7 +206,6 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
   color: white;
   font: inherit;
   line-height: normal;
-  overflow: visible;
   padding: 0;
   margin-right: 1em;
   margin-top: .5em;

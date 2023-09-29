@@ -3,12 +3,14 @@
   @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto+Slab:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
   
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+    
 html {
     scroll-behavior: smooth;
 }
@@ -18,14 +20,15 @@ td {
 }
 
 .navIcon {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     background-color: black;
     padding:.5rem  
 }
 
 .navText {
-    font-size: large;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .jumboBackground {
@@ -187,6 +190,10 @@ td {
     font-family: 'Indie Flower', cursive;
 }
 
+.lato-font {
+    font-family: 'Lato', sans-serif;
+}
+
 .mukataFont {
     font-family: 'Mukta', sans-serif;
 }
@@ -200,10 +207,10 @@ code, pre {
     font-size: .75rem;
 }
 
-pre {
+/* pre {
 	max-height: 30em;
 	overflow: auto;
-}
+} */
 
 .communityText {
     font-size: 1.1rem;
@@ -283,4 +290,15 @@ pre {
     width: 300px;
     height: auto;
     
+}
+
+.react-router-title-logo {
+    width: 100px;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.code-height {
+    
+    height: 100%;
 }

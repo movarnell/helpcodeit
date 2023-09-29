@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z490EPWZW9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container">
+    <div class="row">
+        <h1 class="text-center display-4 lato-font pt-3">React Router v6+ <img src="https://cdn.svgporn.com/logos/react-router.svg" alt="react-router logo" class="react-router-title-logo"></h1>
+       
+         
+          
+<div class="col-lg-8 col-md-8 col-sm-12 col-12"><p>React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering--so take your pick!</p>
+        <p>React Router is now on its 6th version, and it has some major changes from the previous versions. The biggest change is that it is now a collection of single-purpose packages instead of a monolithic library. This means that you can now pick and choose which packages you want to use in your project. This also means that you can now use React Router in non-React projects.</p>
+        </div>
+<div class="col-lg-4 col-md-4 d-block ">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">React Router v6+ Demo</h5>
+      <p class="card-text">This is a demo from the official React Router docs. It shows how to implement it, with added comments.</p>
+      <a href="https://reactrouter.com/en/6.16.0" target="_blank" referrerpolicy="noindex noreferrer" class="btn btn-primary">React Router v6+ Docs</a>
+      <a href="https://github.com/remix-run/react-router/tree/dev/examples/basic" target="_blank" referrerpolicy="noindex noreferrer" class="btn btn-secondary mt-1">React Router Example</a>
+    </div>
+    </div>
+</div>
+        
+       <p class="fw-bold fs-3 text-center mt-5">Below is a demo from the offical React Router docs.<br>It shows how to implement it, with added comments.</p> 
+        <pre>
+        <code class="language-jsx">
+          import { Routes, Route, Outlet, Link } from "react-router-dom";
+
+          export default function App() {
+            return (
+              &lt;div&gt;
+                &lt;h1&gt;Basic Example&lt;/h1&gt;
+
+                &lt;p&gt;
+                  This example demonstrates some of the core features of React Router
+                  including nested &lt;Route&gt;s,{" "}
+                  &lt;Outlet&gt;s, &lt;Link&gt;s, and using a
+                  "*" route (aka "splat route") to render a "not found" page when someone
+                  visits an unrecognized URL.
+                &lt;/p&gt;
+
+                {/* Routes nest inside one another. Nested route paths build upon
+                      parent route paths, and nested route elements render inside
+                      parent route elements. See the note about <Outlet> below. */}
+                &lt;Routes&gt;
+                  &lt;Route path="/" element=&lt;Layout /&gt;&gt;
+                    &lt;Route index element=&lt;Home /&gt;&gt;
+                    &lt;Route path="about" element=&lt;About /&gt;&gt;
+                    &lt;Route path="dashboard" element=&lt;Dashboard /&gt;&gt;
+
+                    {/* Using path="*"" means "match anything", so this route
+                          acts like a catch-all for URLs that we don't have explicit
+                          routes for. */}
+                    &lt;Route path="*" element=&lt;NoMatch /&gt;&gt;
+                  &lt;/Route&gt;
+                &lt;/Routes&gt;
+              &lt;/div&gt;
+            );
+          }
+
+          function Layout() {
+            return (
+              &lt;div&gt;
+                {/* A "layout route" is a good place to put markup you want to
+                    share across all the pages on your site, like navigation. */}
+                &lt;nav&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;Link to="/"&gt;Home&lt;/Link&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;Link to="/about"&gt;About&lt;/Link&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;Link to="/dashboard"&gt;Dashboard&lt;/Link&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;Link to="/nothing-here"&gt;Nothing Here&lt;/Link&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/nav&gt;
+
+                &lt;hr /&gt;
+
+                {/* An <Outlet> renders whatever child route is currently active,
+                    so you can think about this <Outlet> as a placeholder for
+                    the child routes we defined above. */}
+                &lt;Outlet /&gt;
+              &lt;/div&gt;
+            );
+          }
+
+          function Home() {
+            return (
+              &lt;div&gt;
+                &lt;h2&gt;Home&lt;/h2&gt;
+              &lt;/div&gt;
+            );
+          }
+
+          function About() {
+            return (
+              &lt;div&gt;
+                &lt;h2&gt;About&lt;/h2&gt;
+              &lt;/div&gt;
+            );
+          }
+
+          function Dashboard() {
+            return (
+              &lt;div&gt;
+                &lt;h2&gt;Dashboard&lt;/h2&gt;
+              &lt;/div&gt;
+            );
+          }
+
+          function NoMatch() {
+            return (
+              &lt;div&gt;
+                &lt;h2&gt;Nothing to see here!&lt;/h2&gt;
+                &lt;p&gt;
+                  &lt;Link to="/"&gt;Go to the home page&lt;/Link&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+            );
+          }
+       </code>
+      </pre>
+
+          
+    </div>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
