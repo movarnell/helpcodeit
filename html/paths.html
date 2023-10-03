@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z490EPWZW9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Paths - Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container">
+    <div class="row flex-wrap">
+        <h1 class="text-center lato-font">Path Issues</h1>
+        <h2 class="text-center robotoSlabFont fs-4 fw-bold pb-5">"It's like loosing your keys, in the couch. You know where they are, but do you really?"</h2>
+        <div class="col-lg-6 col-md-4 col-12">
+        <p>What is a path? A path is a way to get to a file or folder on your computer. It is a series of folders that you have to go through to get to the file or folder you want. For example, if you want to get to a file called "index.html" that is in a folder called "html" that is in a folder called "helpcodeit" that is in a folder called "Documents" that is in a folder called "Users" that is in a folder called "C:" that is in a folder called "Computer" that is in a folder called "This PC"...Confused yet? Don't worry, I am too. Let's look at a diagram to help us understand this better.</p>
+        
+        </div>
+        <div class="col-lg-6 col-md-8 col-12 p-4"><img src="../images/filepath.png" alt="Path Diagram" class="img-fluid">
+         
+        </div>
+        
+    </div>
+    <div class="row pb-3">
+        <p>The "./" in the diagram above is the current folder. If you used "../" that would take you to the parent folder, aka up one level. The parent folder is the folder above the current folder. The parent folder is the folder that contains the current folder. The parent folder is the folder that the current folder is in. The parent folder is the folder that the current folder is a subfolder of. The parent folder is the folder that the current folder is a child folder of. </p> 
+    </div>
+    <div class="row">
+       
+            <h2 class="text-center lato-font">Absolute Paths</h2>
+            <p>An absolute path is a path that starts from the root folder. The root folder is the top folder in the hierarchy. In the diagram above, the root folder is "This PC". An absolute path is the full path to a file or folder. For example, the absolute path to the file "index.html" in the diagram above is "C:\Users\Documents\helpcodeit\html\index.html".</p>
+            <p>Think of the hierarchy as a pyramid. The root folder is at the top of the pyramid. The folders below the root folder are the next level of the pyramid. The folders below those folders are the next level of the pyramid. And so on. The file or folder you want to get to is at the bottom of the pyramid. The absolute path is the path from the top of the pyramid to the bottom of the pyramid.</p>
+            <p>Most of the time we only need to get from the file we are writing to the file we want to link to. We don't need to go all the way to the top of the pyramid. We just need to go up a few levels. We can do this with a relative path which is shown in the illustration at the top of the page.</p>
+            <div class="text-center mb-5">
+                <h3 class="text-center fs-4 fw-bold">File System Hierarchy</h3>
+                <img src="https://info201-s17.github.io/book/m3-imgs/directory_structure.png" class="img-fluid " alt="File System illustration">
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
