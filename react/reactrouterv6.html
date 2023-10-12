@@ -77,15 +77,15 @@ $(function(){
                       parent route paths, and nested route elements render inside
                       parent route elements. See the note about <Outlet> below. */}
                 &lt;Routes&gt;
-                  &lt;Route path="/" element=&lt;Layout /&gt;&gt;
-                    &lt;Route index element=&lt;Home /&gt;&gt;
-                    &lt;Route path="about" element=&lt;About /&gt;&gt;
-                    &lt;Route path="dashboard" element=&lt;Dashboard /&gt;&gt;
+                  &lt;Route path="/" element={&lt;Layout /&gt;}&gt;
+                    &lt;Route index element={&lt;Home /&gt;}&gt;
+                    &lt;Route path="about" element={&lt;About /&gt;}&gt;
+                    &lt;Route path="dashboard" element={&lt;Dashboard /&gt;}&gt;
 
                     {/* Using path="*"" means "match anything", so this route
                           acts like a catch-all for URLs that we don't have explicit
                           routes for. */}
-                    &lt;Route path="*" element=&lt;NoMatch /&gt;&gt;
+                    &lt;Route path="*" element={&lt;NoMatch /&gt;}&gt;
                   &lt;/Route&gt;
                 &lt;/Routes&gt;
               &lt;/div&gt;
