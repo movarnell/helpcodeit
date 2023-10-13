@@ -1,210 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Press+Start+2P&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Roboto+Slab:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-  
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 td {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .navIcon {
-    width: 4em;
-    height: 4em;
-    background-color: black;
-    padding:.5rem  
+  width: 4em;
+  height: 4em;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 25px;
 }
 
 .navText {
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .jumboBackground {
-    background-image: url("images/pexels-lukas-574069.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 500px;
-    min-height: 300px;
-    width: 100%;
-    position: relative;
-    z-index: -1;
+  background-image: url("images/pexels-lukas-574069.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 500px;
+  min-height: 300px;
+  width: 100%;
+  position: relative;
+  z-index: -1;
 }
 .terminologyHeroBackground {
-    background-image: url("images/waldemar-U3Ptj3jafX8-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 300px;
-    min-height: 50px;
-    width: 100vw;
-    position: relative;
-    z-index: -1;
+  background-image: url("images/waldemar-U3Ptj3jafX8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 300px;
+  min-height: 50px;
+  width: 100vw;
+  position: relative;
+  z-index: -1;
 }
 
-.ptLogo{
-    border-radius: 20px;
-    max-width: 400px;
+.ptLogo {
+  border-radius: 20px;
+  max-width: 400px;
 }
 
 .logoBackground {
-    background-color: black;
-    width: 200px;
+  background-color: black;
+  width: 200px;
 }
 
 .heroLogo {
-    background-color: black;
-    border: 2px solid red;
-    max-width: 300px;
+  border-radius: 55px;
+  background-color: black;
+  max-width: 300px;
 }
 
 .heroText {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-family: 'Mukta', sans-serif;
-    font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Mukta", sans-serif;
+  font-size: 2rem;
 }
 
 .cardImageFormat {
-    max-height: 200px;
+  max-height: 200px;
 }
 
-
-.roundTable{
-    border-radius: 10px;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
+.roundTable {
+  border-radius: 10px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 .tableStyleCustomizations {
-    border: 2px solid gray;
-    
-    font-family: 'Roboto Slab', sans-serif;
-    
+  border: 2px solid gray;
+
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .pressStartFont {
-    font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
-.is-setup-list-title{
-    font-size: 1.5rem;
-    font-weight: bold;
+.is-setup-list-title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .fullyCentered {
-    
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
-.setupImageHero{
-    max-height: 300px;
-    min-height: 100px;
-    width: 100%;
-    position: relative;
-    z-index: -1;
-    padding-top: 30px;
+.setupImageHero {
+  max-height: 300px;
+  min-height: 100px;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  padding-top: 30px;
 }
 
-.removeLinkDecor{
-    text-decoration: none;
-    color: black;
+.removeLinkDecor {
+  text-decoration: none;
+  color: black;
 }
 
-.vsLogo{
-    max-width: 250px;
-    max-height: 250px;
-
+.vsLogo {
+  max-width: 250px;
+  max-height: 250px;
 }
 
-.whereToStartContainer{
-    margin: auto;
-    max-width: 1000px;
+.whereToStartContainer {
+  margin: auto;
+  max-width: 1000px;
 }
 
-.macSetupAppleLogo{
-    max-width: 35px;
-    max-height: 35px;
+.macSetupAppleLogo {
+  max-width: 35px;
+  max-height: 35px;
 }
 
-.robotoFont{
-    font-family: 'Roboto', sans-serif;
+.robotoFont {
+  font-family: "Roboto", sans-serif;
 }
-.robotoSlabFont{
-    font-family: 'Roboto Flex', Arial, Helvetica, sans-serif;
-}
-
-.homebrewLogo{
-    max-width: 100px;
-    max-height: 100px;
+.robotoSlabFont {
+  font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
 }
 
-.macSetupHeader{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 5rem;
+.homebrewLogo {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.macSetupHeader {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
 }
 
 .instructionsFont {
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
-.gitLogo{
-    max-width: 300px;
-    max-height: 300px;
+.gitLogo {
+  max-width: 300px;
+  max-height: 300px;
 }
 
-.centeredTogether{
-    text-align: center;
-    justify-content: center;
-    align-content: center;
+.centeredTogether {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
 }
 
-.maxWidth{
-    max-width: 250px;
-    max-height: 250px;
-    
+.maxWidth {
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .maxWidthRowInitial {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .indieFlower {
-    font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 
 .lato-font {
-    font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .mukataFont {
-    font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
 }
 
 .satisfyFont {
-    font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
 }
 
-code, pre {
-	font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
-    font-size: .75rem;
+code,
+pre {
+  font-family: Consolas, Monaco, "Andale Mono", "Lucida Console", monospace;
+  font-size: 0.75rem;
 }
 
 /* pre {
@@ -213,61 +209,57 @@ code, pre {
 } */
 
 .communityText {
-    font-size: 1.1rem;
-    text-align: start;
+  font-size: 1.1rem;
+  text-align: start;
 }
 
 .termsFont {
-    font-size: 1.1rem;
-    
+  font-size: 1.1rem;
 }
 
 .arrayMethodLinks {
-    font-size: 1.4rem;
-    text-align: start;
-    text-decoration: solid;
-    font-weight: bold;
+  font-size: 1.4rem;
+  text-align: start;
+  text-decoration: solid;
+  font-weight: bold;
 }
 
 .arrayMethodLinks:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .arrayMethodLinks:visited {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .arrayMethodTableofContents {
-    font-size: 1rem;
-    text-decoration: solid;
-    margin: 0%;
-    padding: 0% ;
+  font-size: 1rem;
+  text-decoration: solid;
+  margin: 0%;
+  padding: 0%;
 }
 
 .customBoxShadow {
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.58);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.58);
 }
 
 .jsTitleMain {
-    font-size: 4em;
-    
+  font-size: 4em;
 }
 
 .topicLinks {
-    font-size: 1.5em;
-    text-decoration:none;
-    font-weight: bold;
-
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .objectPageLeadText {
-    font-size: 1.5rem;
-    text-align: start;
+  font-size: 1.5rem;
+  text-align: start;
 }
 .gitignoreLogoSize {
-    max-width: 300px;
-    max-height: 300px;
-   
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .youtube-video {
@@ -276,29 +268,27 @@ code, pre {
 }
 
 .morpheus {
-    width: 300px;
-    height: auto;
-    border-radius: 40px;
+  width: 300px;
+  height: auto;
+  border-radius: 40px;
 }
 
 .graphicsMethods {
-    text-align: center;
-    font-size: 3rem ;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .fixed-jquery-logo {
-    width: 300px;
-    height: auto;
-    
+  width: 300px;
+  height: auto;
 }
 
 .react-router-title-logo {
-    width: 100px;
-    height: auto;
-    padding-bottom: 1rem;
+  width: 100px;
+  height: auto;
+  padding-bottom: 1rem;
 }
 
 .code-height {
-    
-    height: 100%;
+  height: 100%;
 }
