@@ -1,88 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-Z490EPWZW9');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      gtag("config", "G-Z490EPWZW9");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      src="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
     <title>JavaScript Main - Help Code It</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href="../style.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="../style.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="../prism.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <meta name="robots" content="noindex, nofollow" />
-</head>
-<body>
-<!-- SECTION Navbar     -->
-<div id="nav-placeholder">
+  </head>
+  <body>
+    <!-- SECTION Navbar     -->
+    <div id="nav-placeholder"></div>
 
-</div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("../nav.html");
+      });
+    </script>
+    <!-- !SECTION End Nav -->
+    <!-- SECTION Main Content Goes Below This Line -->
+    <div class="container">
+      <div class="row flex-wrap-reverse align-items-center mt-5">
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <h1 class="text-center jsTitleMain">JavaScript</h1>
+          <p>
+            JavaScript is a programming language that adds interactivity to your
+            website. This happens in games, in the behavior of responses when
+            buttons are pressed or with data entry on forms; with dynamic
+            styling; with animation, etc. This article helps you get started
+            with this exciting language and gives you an idea of what is
+            possible.
+          </p>
 
-<script>
-$(function(){
-  $("#nav-placeholder").load("../nav.html");
-});
-</script>
-<!-- !SECTION End Nav -->
-<!-- SECTION Main Content Goes Below This Line -->
-<div class="container">
-    <div class="row flex-wrap-reverse align-items-center mt-5 ">
-        <div class="col-lg-8 col-md-8 col-sm-12"><h1 class="text-center jsTitleMain">JavaScript</h1>
-        <p>JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with this exciting language and gives you an idea of what is possible.</p>
-        
-        <p>This page gives you subjects that are covered to help supplement your learning.</p>
+          <p>
+            This page gives you subjects that are covered to help supplement
+            your learning.
+          </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-            <img src="../images/jswithburstlogo.svg" alt="Javascript Logo with burst color behind" class="img-fluid">
+          <img
+            src="../images/jscolorsbehindtext.png"
+            alt="Javascript Logo with burst color behind"
+            class="img-fluid"
+          />
         </div>
+      </div>
+      <!--!SECTION End Hero Section -->
+      <!-- SECTION Main Content Goes Below This Line -->
+      <div class="row">
+        <h2 class="text-center border-bottom">Pages by Topic</h2>
+        <div class="col">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/declaringvariables.html"
+                class="topicLinks"
+                >Declaring Variables</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/jsfunctions.html"
+                class="topicLinks"
+                >Standard Functions</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/arrowfunctions.html"
+                class="topicLinks"
+                >Arrow Functions</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/arraymethods.html"
+                class="topicLinks"
+                >Array Methods</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/stringmethods.html"
+                class="topicLinks"
+                >String Methods</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/jquerytroubleshooting.html"
+                class="topicLinks"
+                >Troubleshooting jQuery</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col mb-5">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="../javascriptPrincipals/objects.html" class="topicLinks"
+                >Objects</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a href="../javascriptPrincipals/loops.html" class="topicLinks"
+                >Loops</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/stringConcatenation.html"
+                class="topicLinks"
+                >String Concatenation</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/asynchronousfunctions.html"
+                class="topicLinks"
+                >Asynchronous Functions</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a
+                href="../javascriptPrincipals/unittestingmocha&chai.html"
+                class="topicLinks"
+                >Unit Testing with Mocha & Chai</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a href="../javascriptPrincipals/CRUD.html" class="topicLinks"
+                >C.R.U.D. Operations with API's (Fetch)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-<!--!SECTION End Hero Section -->
-<!-- SECTION Main Content Goes Below This Line -->
-<div class="row">
-    <h2 class="text-center border-bottom">Pages by Topic</h2>
-    <div class="col">
-    <ul class="list-group">
-        <li class="list-group-item "><a href="../javascriptPrincipals/declaringvariables.html" class="topicLinks">Declaring Variables</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/jsfunctions.html" class="topicLinks">Standard Functions</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/arrowfunctions.html" class="topicLinks">Arrow Functions</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/arraymethods.html" class="topicLinks">Array Methods</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/stringmethods.html" class="topicLinks">String Methods</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/jquerytroubleshooting.html" class="topicLinks">Troubleshooting jQuery</a></li>
-        
-        </ul>
-    </div>
-    <div class="col mb-5">
-    <ul class="list-group">
-        <li class="list-group-item"><a href="../javascriptPrincipals/objects.html" class="topicLinks">Objects</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/loops.html" class="topicLinks">Loops</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/stringConcatenation.html" class="topicLinks">String Concatenation</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/asynchronousfunctions.html" class="topicLinks">Asynchronous Functions</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/unittestingmocha&chai.html" class="topicLinks">Unit Testing with Mocha & Chai</a></li>
-        <li class="list-group-item"><a href="../javascriptPrincipals/CRUD.html" class="topicLinks">C.R.U.D. Operations with API's (Fetch)</a>
-        </li>
-    </ul>
-</div>
-</div>
 
-    
-</div>
-
-
-
-
-<!-- !SECTION end Main Content -->
-<script src="../prism.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-</body>
+    <!-- !SECTION end Main Content -->
+    <script src="../prism.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
