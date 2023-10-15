@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z490EPWZW9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+<!-- SECTION Navbar     -->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("../nav.html");
+});
+</script>
+<!-- !SECTION End Nav -->
+<!-- SECTION Main Content Goes Below This Line -->
+<div class="container pb-5">
+<h1 class="text-center display-1 robotoSlabFont pt-5">Using Bootstrap <img src="https://cdn.svgporn.com/logos/bootstrap.svg" width="50px" height="50px" alt="Bootstrap Logo"></h1>
+<p class="text-center fw-semibold">Bootstrap is a CSS framework that makes it easy to create responsive websites. It is a great tool for beginners to use to create a website that looks good on all devices.</p>
+<p class="text-center fw-semibold">There are some things that are useful to know when installing bootstrap into your project. First off there are two different ways to link your site to bootstrap.
+</p>
+<h2 class="display-6 pt-5">CDN</h2>
+<p>CDN stands for Content Delivery Network. This is a way to link your site to a file that is hosted on a server somewhere else. This is a great way to link to bootstrap because it is easy to do and it is fast. The downside to this is that if the server goes down or if the file is deleted then your site will not be able to access the file and your site will not work properly. To link to bootstrap using a CDN you can use the following code:</p>
+<pre><code class="language-html">&lt;!-- CSS only --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" crossorigin="anonymous"&gt;
+
+&lt;!-- JavaScript Bundle with Popper --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"&gt;&lt;/script>
+</code></pre>
+
+<h2 class="display-6 pt-5">Download</h2>
+<p class="">The other way to link to bootstrap is to download the files and link to them locally. This is a great way to link to bootstrap because you will always have access to the files and your site will always work. The downside to this is that it is slower than using a CDN.
+    To install the latest version of bootstrap to your project using npm you can use the following code:</p>
+<pre><code class="language-html">npm install bootstrap
+</code></pre>
+    To link to bootstrap using a download you can use the following code:</p>
+<pre><code class="language-html">&lt;!-- CSS only --&gt;
+&lt;link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"&gt;
+
+&lt;!-- JavaScript Bundle with Popper --&gt;
+&lt;script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+</code></pre>
+<h2 class="display-5 pt-5">Using Bootstrap</h2>
+<p>Once you have bootstrap installed you can start using it. Bootstrap has a lot of built in classes that you can use to style your site. You can find a list of all the classes that bootstrap has <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">here</a>. You can also find a list of all the components that bootstrap has <a href="https://getbootstrap.com/docs/5.0/components/">here</a>. Bootstrap also has a lot of built in JavaScript that you can use to make your site more interactive. You can find a list of all the JavaScript that bootstrap has <a href="https://getbootstrap.com/docs/5.0/getting-started/javascript/">here</a>.</p>
+<h2 class="display-6 pt-5">Example of Linking using CDN</h2>
+<p>Here is an example of how to link to bootstrap using a CDN.<br>If linked correctly the button below should be blue on your html page when opened.</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+  
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"&gt;&lt;/script>
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 class="display-6 pt-5">Example of Linking using Download</h2>
+<p >Here is an example of how to link to bootstrap using a download. <br>If linked correctly the button below should be blue on your html page when opened.</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+
+  &lt;script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
+<!-- !SECTION end Main Content -->
+<script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+
+</body>
+</html>
