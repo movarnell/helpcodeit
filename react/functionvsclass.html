@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z490EPWZW9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Function Vs Class in React - Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- SECTION Navbar     -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!-- !SECTION End Nav -->
+    <!-- SECTION Main Content Goes Below This Line -->
+    <div class="container">
+        <div class="row pt-5">
+            <img src="https://cdn.svgporn.com/logos/react.svg" alt="React Logo" width="100px" height="100px">
+            <h1 class="text-center lato-font display-1 pb-5">Function vs Class Components in React </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-2">
+            <h2>How Should I Look at This?</h2>
+            <p>These days React apps are mostly function components. They are easier to read, write, and test. They also
+                perform better than class components.</p>
+            <p>However, class components are still used in some cases. For example, if you work for a company with older
+                React applications they may be written in a Class based style.</p>
+            <h2>What is a Function Component?</h2>
+            <p>A function component is a JavaScript function that accepts props and returns a React element. It is a
+                simple way to write a component that only contains a render method and doesn't have its own state. It is
+                also known as a stateless component.</p>
+            <p>Modern React apps are almost exclusively written as function components. They are easier to read, write,
+                and test. They also perform better than class components.</p>
+            <h2>What is a Class Component?</h2>
+            <p>A class component is a JavaScript class that extends React.Component. It is a more complex way to write a
+                component that has its own state and lifecycle methods. It is also known as a stateful component.</p>
+            <p>It would be a good practice to focus on function components, but you may still need to work with class
+                components in some cases.</p>
+            <h2>What is the Difference Between a Function Component and a Class Component?</h2>
+            <p>Below we will cover a basic layout for a function based component in React, then we will show the Class
+                based component to contrast the two.</p>
+
+            <p>First, let's look at a function based component. This example shows the <code>export default</code>
+                portion at the end. It can be tagged in the beginning where the function delcaration is. In the comments
+                for the code we show what that would look like as well:</p>
+            <pre>
+                <code class="language-jsx">
+                    import React from 'react';
+                    import ReactDOM from 'react-dom';
+
+                    // export default function App() {
+                    function App() {
+                        return (
+                            <div className="App">
+                                <h1>Hello World!</h1>
+                            </div>
+                        );
+                    }
+                    // if exporting above you won't need this line
+                    export default App;
+                </code>
+            </pre>
+            <p>Now lets look at a Class based component. This example shows the <code>export default</code> portion at
+                the end. It can be tagged in the beginning where the class delcaration is. In the comments for the code
+                we show what that would look like as well:</p>
+            <pre>
+                <code class="language-jsx">
+                    import React from 'react';
+                    import ReactDOM from 'react-dom';
+
+                    // export default class App extends React.Component {
+                    class App extends React.Component {
+                        render() {
+                            return (
+                                <div className="App">
+                                    <h1>Hello World!</h1>
+                                </div>
+                            );
+                        }
+                    }
+                    // if exporting above you won't need this line
+                    export default App;
+                </code>
+            </pre>
+            <p class="mt-4">As you can see, the function based component is much easier to read and write. It is also
+                easier to test. The class based component is more complex and has more code to write. It is also more
+                difficult to test.</p>
+            <h3>Why are Class Based Components Not Being Used?</h3>
+            <p>Class based components are not being used because they are more complex and have more code to write. They
+                are also more difficult to test.</p>
+            <p>While they aren't depricated yet, they will be soon. It is a good idea to focus on function based
+                components.</p>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="row text-center fs-5 mb-5">
+        <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            </svg>Back to Top</a>
+    </div>
+
+
+    <!-- !SECTION end Main Content -->
+    <script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+
+</body>
+
+</html>
