@@ -299,3 +299,9 @@ pre {
 .code-height {
   height: 100%;
 }
+
+.reactFvsC {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
