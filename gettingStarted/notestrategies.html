@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z490EPWZW9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z490EPWZW9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- NOTE -- MAKE SURE YOU ADD YOUR PAGE TITLE -->
+    <title>Note Taking with Code - Help Code It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="../prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- SECTION Navbar     -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!-- !SECTION End Nav -->
+    <!-- SECTION Main Content Goes Below This Line -->
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center display-1">Note Taking</h1>
+            <h2 class="text-center display-6">for Coding in <img
+                    src="https://cdn.svgporn.com/logos/visual-studio-code.svg" alt="vscode Logo" width="50px"
+                    height="50px"></h2>
+        </div>
+        <div class="row px-5 align-items-center mt-5">
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12 px-5 py-2">
+                <h3 class="text-center">Taking Coding Notes - How to get setup:</h3>
+                <p class="lead">This is a guide to help you get started with taking notes while you code. This is a
+                    great way to keep track of what you are learning and to be able to reference it later.</p>
+                <p class="lead">This guide will show you how to setup your VSCode to take notes and how to use it.</p>
+                <p class="lead">When getting started the first step is to get organized. I recommend adding a folder
+                    called either notes, or snippets to your workspace in vs code. That way you have a place to put the
+                    files. You will also want to make sure when you create a file to use to take notes you use the
+                    extension for the file type that represents the type of code you're using.</p>
+                <p class="lead">For example, if you are taking notes on HTML, you would want to use the .html extension.
+                    If you are taking notes on JavaScript, you would want to use the .js extension. This will help you
+                    to be able to reference your notes later and will provide the color coding so you can read the code
+                    easier.</p>
+            </div>
+            <div class=" col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="border border-2 rounded-4 p-2 customBoxShadow ">
+                    <div class="text-center pt-3">
+                        <h4>Useful Links for Extensions in VS Code</h4>
+                        <h5>For Note Taking</h5>
+                    </div>
+                    <ul class="text-center">
+                        <li class="list-unstyled mt-2"><a
+                                href="https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors"
+                                class="text-decoration-none fw-bold" target="_blank" rel="noopener noreferrer"><img
+                                    src="https://github.com/StarlaneStudios/vscode-comment-anchors/raw/HEAD/media/extension_logo.png"
+                                    alt="Comment Anchors Extension" width="100%"></a></li>
+                        <li class="list-unstyled mt-2"><a
+                                href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-decoration-none text-black-50 fs-2"><img
+                                    src="https://aaron-bond.gallerycdn.vsassets.io/extensions/aaron-bond/better-comments/3.0.2/1659144495902/Microsoft.VisualStudio.Services.Icons.Default"
+                                    alt="Better Comments Logo" class="ps-5 ps-sm-0" width="50px"> Better Comments</a>
+                        </li>
+                        <li class="list-unstyled mt-2"><a
+                                href="https://marketplace.visualstudio.com/items?itemName=pnp.polacode" target="_blank"
+                                rel="noopener noreferrer" class="text-decoration-none text-black-50 fs-2"><img
+                                    src="https://pnp.gallerycdn.vsassets.io/extensions/pnp/polacode/0.3.4/1569601471865/Microsoft.VisualStudio.Services.Icons.Default"
+                                    alt="Better Comments Logo" class="ps-5 ps-sm-0" width="50px"> Polacode</a></li>
+                        <li class="list-unstyled"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row px-lg-5 px-md-5 px-sm-1 mt-5">
+            <h4 class="text-center">How to Access Settings.json in VS Code</h4>
+<p class="lead">To access the settings.json file you will need to open the
+    command palette. You can do this by pressing <kbd>Ctrl</kbd> +
+    <kbd>Shift</kbd> + <kbd>P</kbd> on Windows or <kbd>Cmd</kbd> +
+    <kbd>Shift</kbd> + <kbd>P</kbd> on Mac. Then type in settings.json and
+    select the option that says 'Preferences: Open Settings (JSON)'. This
+    will open the settings.json file. You can then add the settings for the
+    extension to the file. You will only want to edit the existing settings,
+    so scroll down till you see the settings specific to Comment Anchors.
+</p>            <img src="../images/CleanShot 2023-10-31 at 11.32.18.gif" alt="Gif with instructions to open the settings.json file">
+        </div>
+        <div class="row mt-5">
+            <h3 class="text-center">Info on the Extensions</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Comment Anchors
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">This extension allows you to add anchors to your comments. This is
+                            useful for
+                            taking notes because you can add an anchor to a comment and then reference it later. It
+                            keeps a list of all the 'Tagged' anchors you set. Read the page for the extension for more
+                            information on tagging. If you want to edit the settings to where the entire comment is
+                            highlighted, or if you want to change the color that shows up for a particular tag you will
+                            need to access the settings.json file for vs code.
+                            <div class="row">
+                            <!-- Button trigger modal -->
+                            <div class="text-center mt-3" >
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                Customizing Comments
+                            </button>
+</div>  
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Customizing Your Comments
+                                            </h1>
+                                            
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                           
+
+                                            <h2 class="text-center">Example</h2>
+                                            <pre><code class="language-json">
+    "commentAnchors.tags": {
+    "INFO": {
+    iconColor is the color of the 
+    icon to the left of the comment
+    "iconColor": "#FFFFFF",
+    Hightlight color is the color of 
+    the tag in the comment
+    "highlightColor": "#FFFFFF",
+    "scope": "file",
+    StyleComment when true highlights 
+    the whole comment
+    "styleComment": true
+    },
+}</code></pre>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Better Comments
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Better Comments is an extension that allows you to add different types of comments. This is
+                            useful for taking notes because you can add different types of comments that are color coded much like the Comment Anchors extension.  This is useful for adding a visual representation of what the comment is about. For example, if you are taking notes on a particular function you could add a comment with the emoji of a function. This will help you to be able to quickly find the notes you are looking for. You can also customize the colors of the different types of comments. You can also customize the color of the emojis. If you want to edit the settings you will need to access the settings.json file for vs code. 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Polacode
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Polacode is an extension that allows you to take screenshots of your code. This is useful
+                            for taking notes because you can take a screenshot of your code and then add it to your
+                            notes. This will help you to be able to quickly find the notes you are looking for. You can
+                            also customize the colors of the different types of comments. You can also customize the
+                            color of the emojis. If you want to edit the settings you will need to access the
+                            settings.json file for vs code. You can copy the text from the screenshot and paste it into your notes or share it with anyone.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-5">
+            <h4 class="text-center">Now You Are Ready to Take Notes</h4>
+           <p> With a folder for your notes, saved in files with the correct file extension type, and using the vscode extensions you are ready to start taking notes. Make sure to comment what the code is doing and what you are learning. This will help you to be able to reference your notes later. You can also add emojis to your comments to help you to be able to quickly find the notes you are looking for. You can also add screenshots of your code to your notes. This will help you to be able to quickly find the notes you are looking for. You can also customize the colors of the different types of comments. You can also customize the color of the emojis. If you want to edit the settings you will need to access the settings.json file for vs code. You can copy the text from the screenshot and paste it into your notes or share it with anyone.
+            </p>
+            <p>Also make sure you use a file name when creating the code that tells you what the note is about. Camel case can make them easier to read. Use your own style, as these are something you will reference and don't have to adhere to any particular style guide. </p>
+
+        </div>
+</div>
+
+    </div>
+
+
+
+
+    <!-- !SECTION end Main Content -->
+    <script src="../prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+
+</body>
+
+</html>
