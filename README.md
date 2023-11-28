@@ -99,6 +99,7 @@ Go to https://helpcodeit.com in your preferred browser to view the main page. Na
 ## Contributors
 
 - Michael Varnell
+- Rachel VanHorn
 - ... [Your Name Here]
 
 ## License
