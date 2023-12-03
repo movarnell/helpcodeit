@@ -326,3 +326,7 @@ pre {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+code {
+  font-size: 1rem;
+}
