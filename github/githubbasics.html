@@ -68,24 +68,73 @@ $(function(){
       <p>Git is a tool that helps you track changes in your code. It works hand-in-hand with GitHub.</p>
       <p>The first time you setup a new repository you will have a list of commands that github will show you on the website. You will want to copy and paste those into your terminal one by one, if your using Mac ignore the 'Echo' command that comes first. Additionally you can use a "." instead of README.MD if you want to go on and send up all your files. It will look something like this:</p> 
       <img src="../images/githubsetupcommandsfromsite.png" class="pb-5"/>
-      <p>These commands will:
-
-      </p>
-      <ul>
-        <li>Set up a new local Git repository These are the files that make up your project, and the changes that you make to them.</li>
-        <li>Add all your files to it. That is specifically what the "." is for. You will need to replace the README.MD in the Add command to do that. Otherwise it will only add a README file to the repo. </li>
-        <li>Save your changes with a message. This is what we call the commit message. It's important to write a good commit message so you can tell what changes you made.</li>
-        <li>Connect your local code to GitHub.</li>
-        <li>Send your code to GitHub.</li>
-    </ul>
-      <p>Those commands are only done the first time when you setup your repository the first time. After that the basic commands will look like the ones below: </p>
+        <p>Here is a step-by-step explanation of each Git command:</p>
+        
+        <p class="fs-5">1. <code>echo "# example" &gt; README.md</code></p>
+        <p>
+        <ul>
+          <li><code>echo</code> is used to display text.</li>
+          <li><code># example</code> is the text to be displayed.</li>
+          <li><code>&gt;</code> redirects the output to a file.</li>
+          <li><code>README.md</code> is a markdown file where the output is saved.</li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">2. <code>git init</code></p>
+        <p>
+        <ul>
+          <li>Initializes a new Git repository in the current directory.</li>
+          <li>Creates a hidden <code>.git</code> directory with Git repository files.</li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">3. <code>git add README.md</code></p>
+        <p>
+        <ul>
+          <li>Adds the <code>README.md</code> file to the staging area in Git.</li>
+          <li>Prepares the file for a commit. You can also use just a period after <code>git add</code> to add all changes in the project. That would look like: <code>git add <span class="fw-bolder">.</span></code></li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">4. <code>git commit -m "first commit"</code></p>
+        <p>
+        <ul>
+          <li>Commits the staged changes to the repository.</li>
+          <li><code>-m "first commit"</code> sets the commit message to "first commit".</li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">5. <code>git branch -M main</code></p>
+        <p>
+        <ul>
+          <li>Renames the current branch to <code>main</code>.</li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">6. <code>git remote add origin https://github.com/movarnell/example.git</code></p>
+        <p>
+        <ul>
+          <li>Adds a new remote repository named <code>origin</code>.</li>
+          <li><code>https://github.com/movarnell/example.git</code> is the URL of the remote repository.</li>
+        </ul>
+        </p>
+        
+        <p class="fs-5">7. <code>git push -u origin main</code></p>
+        <p>
+        <ul>
+          <li>Pushes the changes in the local repository to the <code>main</code> branch of the remote repository
+            <code>origin</code>.</li>
+          <li><code>-u</code> sets the upstream for the branch.</li>
+        </ul>
+        </p>
+      <p>Those commands are only done the first time when you setup your repository the first time. After that the basic commands to upload changes to your code will look like the ones below: </p>
 
               <pre><code class="language-bash">
 git add .
 git commit -m "Commit Message Here"
 git push 
 </code></pre>
-<p>While primarily in this bootcamp we will use GitHub for pushing your assignments up, it is best practice to push your code up often. Take advantage of the security that GitHub offers and use the ability to backup remotely for free!</p>
+<p class="mt-5 fw-bold">While primarily in this bootcamp we will use GitHub for pushing your assignments up, it is best practice to push your code up often. Take advantage of the security that GitHub offers and use the ability to backup remotely for free!</p>
   <img src="../images/CleanShot 2023-12-05 at 12.18.20.png" class="img-fluid"/>
 
       <h2 class="mt-4">Why Use GitHub?</h2>
